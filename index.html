@@ -363,6 +363,16 @@
             transition: color 0.3s;
         }
         
+        .contact-link {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .contact-link:hover {
+            text-decoration: none;
+        }
+        
         .contact-form {
             background-color: var(--branco);
             padding: 50px;
@@ -603,21 +613,27 @@
                 <div class="contact-card">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Localização</h3>
-                    <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220" class="contact-link" target="_blank">
+                        <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
+                    </a>
                 </div>
                 <div class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>lucilemes@gmail.com</p>
+                    <a href="mailto:lucilemes@gmail.com" class="contact-link">
+                        <p>lucilemes@gmail.com</p>
+                    </a>
                 </div>
                 <div class="contact-card">
                     <i class="fas fa-phone"></i>
                     <h3>Telefone</h3>
-                    <p>(44) 9946-7947</p>
+                    <a href="tel:+554499467947" class="contact-link">
+                        <p>(44) 9946-7947</p>
+                    </a>
                 </div>
             </div>
             <div class="contact-form">
-                <form action="https://formsubmit.co/contato@lucilemes.com" method="POST">
+                <form action="https://formsubmit.co/lucilemes@gmail.com" method="POST">
                     <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
                     <div class="form-group">
                         <label for="name">Nome</label>
@@ -646,7 +662,7 @@
         <div class="social-links">
             <a href="https://facebook.com/LuciLemes" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://instagram.com/luci_lemes_fotografa" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/5544999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/554499467947" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
         <div class="copyright">
             &copy; 2025 Luci Lemes Fotografia. Todos os direitos reservados.
