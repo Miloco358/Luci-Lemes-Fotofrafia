@@ -3,176 +3,656 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luci Lemes - Fotografia</title>
+    <title>Luci Lemes Fotografia | Capturando Momentos Únicos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --bege: #F5F0E6;
+            --bege-escuro: #E8E1D1;
+            --cinza: #6C6C6C;
+            --cinza-escuro: #3A3A3A;
+            --dourado: #C0A580;
+        }
+        
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            background-color: var(--bege);
+            color: var(--cinza-escuro);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.8;
         }
-        header, footer {
-            background-color: #111;
-            padding: 20px;
-            text-align: center;
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            color: var(--cinza-escuro);
         }
-        nav {
-            margin: 20px 0;
+        
+        header {
+            background-color: rgba(245, 240, 230, 0.9);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(58, 58, 58, 0.1);
+            transition: all 0.3s ease;
         }
-        .btn {
-            background-color: #fff;
-            color: #000;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
+        
+        header.scrolled {
+            padding: 15px 0;
+            background-color: rgba(245, 240, 230, 0.98);
         }
-        .btn:hover {
-            background-color: #ddd;
-        }
-        .container {
+        
+        .header-container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 0 20px;
         }
-        .carousel {
-            position: relative;
-            max-width: 800px;
-            margin: 40px auto;
-            overflow: hidden;
-            border: 5px solid #fff;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--cinza-escuro);
+            text-decoration: none;
+            letter-spacing: 1px;
         }
-        .carousel-inner {
+        
+        .logo span {
+            color: var(--dourado);
+        }
+        
+        nav ul {
             display: flex;
-            transition: transform 0.5s ease;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
-        .carousel img {
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--cinza-escuro);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--dourado);
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: var(--dourado);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover:after {
             width: 100%;
+        }
+        
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            background: url('https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--dourado);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 1px solid var(--dourado);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--dourado);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--cinza-escuro);
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: var(--dourado);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(192, 165, 128, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-overlay h3 {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .campaigns {
+            background-color: var(--bege-escuro);
+        }
+        
+        .campaign-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .campaign-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .campaign-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .campaign-content {
+            padding: 20px;
+        }
+        
+        .campaign-content h3 {
+            margin-top: 0;
+            color: var(--dourado);
+        }
+        
+        .campaign-content .date {
+            color: var(--cinza);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
             display: block;
         }
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.5);
-            color: #000;
-            border: none;
-            padding: 15px;
-            cursor: pointer;
-            font-size: 20px;
-            z-index: 10;
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
-        .prev { left: 10px; }
-        .next { right: 10px; }
+        
+        .contact-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--dourado);
+            margin-bottom: 20px;
+        }
+        
+        .contact-card h3 {
+            margin-top: 0;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            transition: border 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--dourado);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        footer {
+            background-color: var(--cinza-escuro);
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            color: var(--dourado);
+        }
+        
         .social-links {
             margin: 20px 0;
         }
+        
         .social-links a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 24px;
-            text-decoration: none;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s;
         }
-        form {
-            max-width: 500px;
-            margin: 20px auto;
-            text-align: left;
+        
+        .social-links a:hover {
+            background-color: var(--dourado);
+            transform: translateY(-3px);
         }
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
         }
-        form button {
-            background: #fff;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .campanha {
-            margin: 30px 0;
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 200px;
+            }
+            
+            .btn-outline {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Luci Lemes Fotografia</h1>
-        <nav>
-            <a href="#portfolio" class="btn">Portfólio</a>
-            <a href="#contato" class="btn">Contato</a>
-            <a href="#campanhas" class="btn">Campanhas</a>
-        </nav>
+    <header id="header">
+        <div class="header-container">
+            <a href="#" class="logo">Luci <span>Lemes</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#campaigns">Campanhas</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="container" id="portfolio">
-        <h2>Portfólio</h2>
-        <div class="carousel">
-            <div class="carousel-inner">
-                <img src="foto1.jpg" alt="Foto 1 - Trabalho da Luci Lemes">
-                <img src="foto2.jpg" alt="Foto 2 - Trabalho da Luci Lemes">
-                <img src="foto3.jpg" alt="Foto 3 - Trabalho da Luci Lemes">
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Capturando Momentos Únicos</h1>
+            <p>Fotografia artística que conta histórias através de imagens. Cada clique é uma memória eternizada com sensibilidade e técnica.</p>
+            <a href="#portfolio" class="btn">Ver Portfólio</a>
+            <a href="#contact" class="btn btn-outline">Agendar Sessão</a>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Portfólio</h2>
             </div>
-            <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
-            <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Retratos">
+                    <div class="portfolio-overlay">
+                        <h3>Retratos</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80" alt="Casamentos">
+                    <div class="portfolio-overlay">
+                        <h3>Casamentos</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Família">
+                    <div class="portfolio-overlay">
+                        <h3>Família</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Books">
+                    <div class="portfolio-overlay">
+                        <h3>Books</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Eventos">
+                    <div class="portfolio-overlay">
+                        <h3>Eventos</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Moda">
+                    <div class="portfolio-overlay">
+                        <h3>Moda</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container" id="campanhas">
-        <h2>Campanhas</h2>
-        <div class="campanha">
-            <h3>Dia das Mães - 2025</h3>
-            <a href="#contato" class="btn">Agendar</a>
+    <section class="campaigns" id="campaigns">
+        <div class="container">
+            <div class="section-title">
+                <h2>Campanhas Especiais</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="campaign-card">
+                    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dia das Mães">
+                    <div class="campaign-content">
+                        <span class="date">Maio 2025</span>
+                        <h3>Dia das Mães</h3>
+                        <p>Sessão especial para celebrar o amor materno. Presenteie sua mãe com fotos profissionais que eternizam esse vínculo único.</p>
+                        <a href="#contact" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Agendar</a>
+                    </div>
+                </div>
+                <div class="campaign-card">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Gestante">
+                    <div class="campaign-content">
+                        <span class="date">Todo o ano</span>
+                        <h3>Gestante</h3>
+                        <p>Registre esse momento mágico da sua vida. Sessões delicadas e emocionantes que celebram a espera do seu bebê.</p>
+                        <a href="#contact" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Agendar</a>
+                    </div>
+                </div>
+                <div class="campaign-card">
+                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Aniversário">
+                    <div class="campaign-content">
+                        <span class="date">Todo o ano</span>
+                        <h3>Aniversário</h3>
+                        <p>Celebre seu dia especial com fotos incríveis. Sessões personalizadas para todas as idades.</p>
+                        <a href="#contact" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Agendar</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Adicione mais campanhas aqui -->
-    </div>
+    </section>
 
-    <div class="container" id="contato">
-        <h2>Contato</h2>
-        <div class="social-links">
-            <a href="https://instagram.com/lucilemesfotografia" target="_blank">📷 Instagram</a>
-            <a href="https://wa.me/5511999999999" target="_blank">💬 WhatsApp</a>
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Mim</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                    Sou Luci Lemes, fotógrafa profissional com mais de 10 anos de experiência em capturar momentos especiais. Minha abordagem combina técnica apurada com sensibilidade artística para criar imagens que contam histórias e evocam emoções.
+                </p>
+                <p style="font-size: 1.1rem;">
+                    Acredito que a fotografia vai além de simples registros - é a arte de eternizar sentimentos, conexões e memórias que ficarão para sempre no coração de quem as vê.
+                </p>
+            </div>
         </div>
-        <form action="https://formsubmit.co/lucilemes@gmail.com" method="POST">
-            <input type="hidden" name="_next" value="https://luci-lemes-fotografia.vercel.app/obrigado.html">
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu e-mail" required>
-            <input type="tel" name="phone" placeholder="Seu telefone">
-            <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-    </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contato</h2>
+            </div>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Localização</h3>
+                    <p>São Paulo, Brasil</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>contato@lucilemes.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefone</h3>
+                    <p>(11) 99999-9999</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="https://formsubmit.co/contato@lucilemes.com" method="POST">
+                    <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="border: none; width: 100%;">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Luci Lemes Fotografia. Todos os direitos reservados.</p>
+        <a href="#" class="footer-logo">Luci <span>Lemes</span></a>
+        <div class="social-links">
+            <a href="https://instagram.com/lucilemesfotografia" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/lucilemesfotografia" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://pinterest.com/lucilemes" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://wa.me/5511999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Luci Lemes Fotografia. Todos os direitos reservados.
+        </div>
     </footer>
 
     <script>
-        // Carrossel automático
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.carousel-inner img');
-        const totalSlides = slides.length;
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
         
-        function moveSlide(n) {
-            slideIndex += n;
-            if (slideIndex >= totalSlides) slideIndex = 0;
-            if (slideIndex < 0) slideIndex = totalSlides - 1;
-            
-            document.querySelector('.carousel-inner').style.transform = 
-                `translateX(-${slideIndex * 100}%)`;
-        }
-        
-        // Auto-avanço a cada 5 segundos
-        setInterval(() => moveSlide(1), 5000);
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
