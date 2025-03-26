@@ -76,6 +76,7 @@
             color: #fff;
             margin: 0 10px;
             font-size: 24px;
+            text-decoration: none;
         }
         form {
             max-width: 500px;
@@ -96,6 +97,10 @@
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;
+            font-weight: bold;
+        }
+        .campanha {
+            margin: 30px 0;
         }
     </style>
 </head>
@@ -117,8 +122,8 @@
                 <img src="foto2.jpg" alt="Foto 2 - Trabalho da Luci Lemes">
                 <img src="foto3.jpg" alt="Foto 3 - Trabalho da Luci Lemes">
             </div>
-            <button class="carousel-btn prev" onclick="moveSlide(-1)">?</button>
-            <button class="carousel-btn next" onclick="moveSlide(1)">?</button>
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+            <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
         </div>
     </div>
 
@@ -126,6 +131,7 @@
         <h2>Campanhas</h2>
         <div class="campanha">
             <h3>Dia das Mães - 2025</h3>
+            <p>Sessões especiais com 20% de desconto até 30/04.</p>
             <a href="#contato" class="btn">Agendar</a>
         </div>
         <!-- Adicione mais campanhas aqui -->
@@ -134,10 +140,11 @@
     <div class="container" id="contato">
         <h2>Contato</h2>
         <div class="social-links">
-            <a href="https://instagram.com/lucilemesfotografia" target="_blank">?? Instagram</a>
-            <a href="https://wa.me/5511999999999" target="_blank">?? WhatsApp</a>
+            <a href="https://instagram.com/lucilemesfotografia" target="_blank">📷 Instagram</a>
+            <a href="https://wa.me/5511999999999" target="_blank">💬 WhatsApp</a>
         </div>
         <form action="https://formsubmit.co/lucilemes@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://luci-lemes-fotografia.vercel.app/obrigado.html">
             <input type="text" name="name" placeholder="Seu nome" required>
             <input type="email" name="email" placeholder="Seu e-mail" required>
             <input type="tel" name="phone" placeholder="Seu telefone">
