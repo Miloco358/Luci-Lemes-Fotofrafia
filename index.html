@@ -17,10 +17,6 @@
             --cinza-claro: #EEEEEE;
         }
         
-        * {
-            box-sizing: border-box;
-        }
-        
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--branco);
@@ -28,14 +24,12 @@
             margin: 0;
             padding: 0;
             line-height: 1.8;
-            overflow-x: hidden;
         }
         
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             color: var(--preto);
-            margin-top: 0;
         }
         
         header {
@@ -61,7 +55,6 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
-            width: 100%;
         }
         
         .logo {
@@ -144,20 +137,18 @@
             z-index: 1;
             max-width: 800px;
             padding: 0 20px;
-            width: 100%;
         }
         
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: 3.5rem;
             margin-bottom: 20px;
             color: var(--branco);
         }
         
         .hero p {
-            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-size: 1.2rem;
             margin-bottom: 30px;
             color: var(--cinza-claro);
-            padding: 0 10px;
         }
         
         .btn {
@@ -173,7 +164,6 @@
             border: 2px solid var(--branco);
             text-transform: uppercase;
             font-size: 12px;
-            margin: 5px;
         }
         
         .btn:hover {
@@ -193,17 +183,16 @@
         }
         
         section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
-            padding: 0 20px;
+            margin-bottom: 60px;
         }
         
         .section-title h2 {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-size: 2.5rem;
             position: relative;
             display: inline-block;
             padding-bottom: 15px;
@@ -224,21 +213,18 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-            width: 100%;
         }
         
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            width: 100%;
         }
         
         .portfolio-item {
             position: relative;
             overflow: hidden;
             height: 400px;
-            width: 100%;
         }
         
         .portfolio-item img {
@@ -272,11 +258,10 @@
         
         .portfolio-overlay h3 {
             color: var(--branco);
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            font-size: 1.5rem;
             text-align: center;
             letter-spacing: 2px;
             text-transform: uppercase;
-            padding: 0 10px;
         }
         
         .campaigns {
@@ -289,7 +274,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s;
             border: 1px solid var(--cinza-claro);
-            width: 100%;
         }
         
         .campaign-card:hover {
@@ -304,13 +288,12 @@
         }
         
         .campaign-content {
-            padding: 25px;
+            padding: 30px;
         }
         
         .campaign-content h3 {
             margin-top: 0;
             color: var(--preto);
-            font-size: 1.2rem;
         }
         
         .campaign-content .date {
@@ -328,11 +311,7 @@
         }
         
         .about-text {
-            padding-right: 20px;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
+            padding-right: 30px;
         }
         
         .about-image {
@@ -347,35 +326,23 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-bottom: 50px;
-            width: 100%;
         }
         
         .contact-card {
             background-color: var(--cinza-claro);
-            padding: 0;
-            transition: all 0.3s;
-            position: relative;
-            cursor: pointer;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        .contact-card a {
-            display: block;
             padding: 40px 30px;
-            text-decoration: none;
-            color: inherit;
-            height: 100%;
+            text-align: center;
+            transition: all 0.3s;
         }
         
         .contact-card:hover {
             background-color: var(--preto);
             color: var(--branco);
-            transform: translateY(-5px);
         }
         
-        .contact-card:hover i,
         .contact-card:hover h3,
-        .contact-card:hover p {
+        .contact-card:hover p,
+        .contact-card:hover i {
             color: var(--branco);
         }
         
@@ -389,25 +356,27 @@
         .contact-card h3 {
             margin-top: 0;
             transition: color 0.3s;
-            font-size: 1.2rem;
         }
         
         .contact-card p {
             margin-bottom: 0;
             transition: color 0.3s;
-            font-size: 0.9rem;
+        }
+        
+        .contact-card a {
+            color: inherit;
+            text-decoration: none;
         }
         
         .contact-form {
             background-color: var(--branco);
-            padding: 40px;
+            padding: 50px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--cinza-claro);
-            width: 100%;
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .form-group label {
@@ -442,7 +411,7 @@
         footer {
             background-color: var(--preto);
             color: var(--branco);
-            padding: 50px 0 20px;
+            padding: 70px 0 30px;
             text-align: center;
         }
         
@@ -480,15 +449,15 @@
         }
         
         .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
+            margin-top: 50px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             color: var(--cinza-claro);
             letter-spacing: 1px;
         }
         
-        /* Media Queries para Responsividade */
+        /* Otimizações para mobile */
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
@@ -499,24 +468,23 @@
                 margin-bottom: 40px;
             }
             
-            .about-image {
-                height: 400px;
-                order: -1;
+            .hero h1 {
+                font-size: 2.8rem;
             }
             
-            section {
-                padding: 60px 0;
+            .portfolio-item {
+                height: 350px;
             }
         }
         
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
-                padding: 15px;
+                text-align: center;
             }
             
             nav ul {
-                margin-top: 15px;
+                margin-top: 20px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
@@ -525,12 +493,8 @@
                 margin: 0 10px 10px;
             }
             
-            .hero {
-                min-height: 500px;
-            }
-            
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .hero p {
@@ -538,42 +502,32 @@
             }
             
             .btn {
+                display: block;
+                margin: 15px auto;
+                max-width: 250px;
                 padding: 10px 20px;
-                font-size: 11px;
-                margin: 5px;
             }
             
             .portfolio-item {
                 height: 300px;
             }
             
-            .campaign-card img {
-                height: 200px;
-            }
-            
-            .contact-card {
-                padding: 30px 20px;
+            .about-image {
+                height: 350px;
             }
             
             .contact-form {
                 padding: 30px;
             }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
         }
         
         @media (max-width: 480px) {
-            .hero {
-                min-height: 400px;
-            }
-            
             .hero h1 {
                 font-size: 1.8rem;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 250px;
-                margin: 5px auto;
-                display: block;
             }
             
             .portfolio-grid {
@@ -584,8 +538,8 @@
                 grid-template-columns: 1fr;
             }
             
-            .about-image {
-                height: 300px;
+            .hero {
+                min-height: 500px;
             }
         }
     </style>
@@ -610,10 +564,8 @@
         <div class="hero-content">
             <h1>LUCI LEMES FOTOGRAFIA</h1>
             <p>Capturando momentos com sensibilidade e técnica profissional</p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn">Ver Portfólio</a>
-                <a href="#contact" class="btn">Agendar Sessão</a>
-            </div>
+            <a href="#portfolio" class="btn">Ver Portfólio</a>
+            <a href="#contact" class="btn">Agendar Sessão</a>
         </div>
     </section>
 
@@ -657,7 +609,7 @@
                         <span class="date">Maio 2025</span>
                         <h3>Dia das Mães</h3>
                         <p>Sessão especial para celebrar o amor materno.</p>
-                        <a href="#contact" class="btn btn-dark" style="padding: 8px 20px; font-size: 11px;">Agendar</a>
+                        <a href="#contact" class="btn btn-dark" style="padding: 10px 25px; font-size: 12px;">Agendar</a>
                     </div>
                 </div>
                 <div class="campaign-card">
@@ -666,7 +618,7 @@
                         <span class="date">Todo o ano</span>
                         <h3>Gestante</h3>
                         <p>Registre esse momento mágico da sua vida.</p>
-                        <a href="#contact" class="btn btn-dark" style="padding: 8px 20px; font-size: 11px;">Agendar</a>
+                        <a href="#contact" class="btn btn-dark" style="padding: 10px 25px; font-size: 12px;">Agendar</a>
                     </div>
                 </div>
             </div>
@@ -695,26 +647,24 @@
                 <h2>Contato</h2>
             </div>
             <div class="contact-info">
-                <div class="contact-card" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220', '_blank')">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220" target="_blank">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Localização</h3>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Localização</h3>
+                    <a href="https://maps.google.com/?q=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220" target="_blank">
                         <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
                     </a>
                 </div>
-                
-                <div class="contact-card" onclick="window.location.href='mailto:lucilemes@gmail.com'">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
                     <a href="mailto:lucilemes@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
                         <p>lucilemes@gmail.com</p>
                     </a>
                 </div>
-                
-                <div class="contact-card" onclick="window.location.href='tel:+554499467947'">
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefone</h3>
                     <a href="tel:+554499467947">
-                        <i class="fas fa-phone"></i>
-                        <h3>Telefone</h3>
                         <p>(44) 9946-7947</p>
                     </a>
                 </div>
@@ -722,6 +672,7 @@
             <div class="contact-form">
                 <form action="https://formsubmit.co/lucilemes@gmail.com" method="POST">
                     <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
+                    <input type="hidden" name="_subject" value="Novo contato do site">
                     <div class="form-group">
                         <label for="name">Nome</label>
                         <input type="text" id="name" name="name" class="form-control" required>
@@ -777,13 +728,15 @@
                 });
             });
         });
-
-        // Prevenir comportamento padrão em links de contato para evitar duplo clique
-        document.querySelectorAll('.contact-card a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.stopPropagation();
+        
+        // Form submission handling
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                // You can add form validation here if needed
+                console.log('Form submitted');
             });
-        });
+        }
     </script>
 </body>
 </html>
