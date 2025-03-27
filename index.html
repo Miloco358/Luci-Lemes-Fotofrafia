@@ -58,12 +58,15 @@
         }
         
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--preto);
-            text-decoration: none;
-            letter-spacing: 1px;
+            display: block;
+            height: 60px; /* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            max-width: 200px; /* Ajuste conforme necessário */
         }
         
         nav ul {
@@ -491,6 +494,14 @@
         }
         
         @media (max-width: 768px) {
+             .logo {
+                 height: 50px; /* Tamanho menor para mobile */
+            }
+    
+            .header-container {
+                padding: 10px 20px; /* Reduz o padding no mobile */
+            }
+        }
             .header-container {
                 flex-direction: column;
             }
@@ -546,7 +557,9 @@
 <body>
     <header id="header">
         <div class="header-container">
-            <a href="#" class="logo">LUCI LEMES</a>
+            <a href="#" class="logo">
+    <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
+</a>
             <nav>
                 <ul>
                     <li><a href="#home">Início</a></li>
