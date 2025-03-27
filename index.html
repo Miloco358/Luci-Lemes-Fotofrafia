@@ -341,14 +341,6 @@
             cursor: pointer;
         }
         
-        .contact-card a {
-            color: inherit;
-            text-decoration: none;
-            display: block;
-            height: 100%;
-            width: 100%;
-        }
-        
         .contact-card:hover {
             background-color: var(--preto);
             color: var(--branco);
@@ -377,6 +369,14 @@
             margin-bottom: 0;
             transition: color 0.3s;
             font-size: 0.95rem;
+        }
+        
+        .contact-card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
         }
         
         .contact-form {
@@ -467,38 +467,6 @@
             font-size: 0.85rem;
             color: var(--cinza-claro);
             letter-spacing: 1px;
-        }
-        
-        /* Instruções para edição */
-        .edit-instructions {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--preto);
-            color: var(--branco);
-            padding: 15px;
-            border-radius: 5px;
-            max-width: 300px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            z-index: 1000;
-            display: none;
-        }
-        
-        .edit-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--preto);
-            color: var(--branco);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1001;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
         
         @media (max-width: 992px) {
@@ -604,7 +572,6 @@
                 <h2>Portfólio</h2>
             </div>
             <div class="portfolio-grid">
-                <!-- Fácil edição - Basta substituir os src das imagens -->
                 <div class="portfolio-item">
                     <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Retratos de Mulheres">
                     <div class="portfolio-overlay">
@@ -677,26 +644,20 @@
                 <h2>Contato</h2>
             </div>
             <div class="contact-info">
-                <div class="contact-card" onclick="window.location.href='https://maps.google.com?q=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220';">
-                    <a href="https://maps.google.com?q=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220" target="_blank">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Localização</h3>
-                        <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
-                    </a>
+                <div class="contact-card" onclick="window.location.href='https://maps.google.com?q=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220'">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Localização</h3>
+                    <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
                 </div>
-                <div class="contact-card" onclick="window.location.href='mailto:lucilemes@gmail.com';">
-                    <a href="mailto:lucilemes@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>lucilemes@gmail.com</p>
-                    </a>
+                <div class="contact-card" onclick="window.location.href='mailto:lucilemes@gmail.com'">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>lucilemes@gmail.com</p>
                 </div>
-                <div class="contact-card" onclick="window.location.href='tel:+5544999467947';">
-                    <a href="tel:+5544999467947">
-                        <i class="fas fa-phone"></i>
-                        <h3>Telefone</h3>
-                        <p>(44) 99946-7947</p>
-                    </a>
+                <div class="contact-card" onclick="window.location.href='tel:+5544999467947'">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefone</h3>
+                    <p>(44) 99946-7947</p>
                 </div>
             </div>
             <div class="contact-form">
@@ -736,21 +697,6 @@
             &copy; 2025 Luci Lemes Fotografia. Todos os direitos reservados.
         </div>
     </footer>
-
-    <div class="edit-instructions" id="editInstructions">
-        <h4>Como editar as fotos:</h4>
-        <ol>
-            <li>Localize a imagem que deseja alterar</li>
-            <li>Substitua o valor do "src" (entre aspas) pelo link da nova imagem</li>
-            <li>Atualize também o texto "alt" para descrição da imagem</li>
-        </ol>
-        <p>Exemplo: <code>src="LINK_DA_SUA_IMAGEM_AQUI"</code></p>
-        <button onclick="hideInstructions()" style="background: var(--branco); color: var(--preto); border: none; padding: 5px 10px; margin-top: 10px; cursor: pointer;">Entendi</button>
-    </div>
-
-    <div class="edit-toggle" onclick="toggleInstructions()">
-        <i class="fas fa-question"></i>
-    </div>
 
     <script>
         // Header scroll effect
@@ -801,16 +747,6 @@
                     console.error(error);
                 });
             });
-        }
-
-        // Edit instructions
-        function toggleInstructions() {
-            const instructions = document.getElementById('editInstructions');
-            instructions.style.display = instructions.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function hideInstructions() {
-            document.getElementById('editInstructions').style.display = 'none';
         }
     </script>
 </body>
