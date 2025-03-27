@@ -55,6 +55,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
+            justify-content: space-between;
         }
         
         .logo {
@@ -67,8 +68,15 @@
             height: 100%;
             width: auto;
             max-width: 200px; /* Ajuste conforme necessário */
+        .logo-container {
+            flex: 1; /* Permite que a logo ocupe o espaço restante */
+            display: flex;
+            justify-content: flex-start; /* Alinha a logo à esquerda */
         }
-        
+        nav {
+            display: flex;
+            justify-content: flex-end; /* Alinha o menu à direita */
+        }
         nav ul {
             display: flex;
             list-style: none;
@@ -549,9 +557,11 @@
 <body>
     <header id="header">
         <div class="header-container">
-            <a href="#" class="logo">
-    <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
-</a>
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
+                </a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#home">Início</a></li>
