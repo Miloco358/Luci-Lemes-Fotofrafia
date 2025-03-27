@@ -502,12 +502,10 @@
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
-                padding: 0 20px;
             }
             
             .logo {
-                margin: 15px 0;
-                margin-right: 0;
+                margin-right: 0; /* Remove margens automáticas */
             }
             
             nav {
@@ -516,9 +514,8 @@
             }
             
             nav ul {
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 15px;
+                gap: 15px; /* Aumenta o espaço entre os itens do menu */
+                margin-left: 0; /* Empurra o menu para a direita */
             }
             
             .hero {
@@ -584,8 +581,6 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Luci Lemes Fotografia</h1>
-            <p>Capturando momentos, criando memórias eternas</p>
             <a href="#portfolio" class="btn">Ver Portfólio</a>
             <a href="#contact" class="btn">Agendar Sessão</a>
         </div>
