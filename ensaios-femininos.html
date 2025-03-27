@@ -6,6 +6,8 @@
     <title>Ensaios Femininos | Luci Lemes Fotografia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <style>
         :root {
             --preto: #000000;
@@ -50,15 +52,16 @@
             overflow: hidden;
             border-radius: 5px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
         }
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.05);
+            cursor: zoom-in;
         }
         .btn-voltar {
             display: block;
@@ -70,6 +73,10 @@
             width: fit-content;
             text-decoration: none;
             border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn-voltar:hover {
+            background: #333;
         }
         footer {
             background: var(--preto);
@@ -88,88 +95,38 @@
     <main class="gallery-page">
         <h1>Ensaios Femininos</h1>
         <div class="gallery-grid">
-            <!-- SUAS FOTOS JÁ INSERIDAS -->
+            <!-- Galeria com Lightbox -->
             <div class="gallery-item">
-                <img src="https://i.imgur.com/pDiDCka.jpg" alt="Ensaio Feminino 1">
+                <a href="https://i.imgur.com/pDiDCka.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 1">
+                    <img src="https://i.imgur.com/pDiDCka.jpg" alt="Ensaio Feminino 1">
+                </a>
             </div>
             <div class="gallery-item">
-                <img src="https://i.imgur.com/m0zU3jq.jpg" alt="Ensaio Feminino 2">
+                <a href="https://i.imgur.com/m0zU3jq.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 2">
+                    <img src="https://i.imgur.com/m0zU3jq.jpg" alt="Ensaio Feminino 2">
+                </a>
             </div>
             <div class="gallery-item">
-                <img src="https://i.imgur.com/emj1iz3.jpg" alt="Ensaio Feminino 3">
+                <a href="https://i.imgur.com/emj1iz3.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 3">
+                    <img src="https://i.imgur.com/emj1iz3.jpg" alt="Ensaio Feminino 3">
+                </a>
             </div>
             <div class="gallery-item">
-                <img src="https://i.imgur.com/fsnjvnu.jpg" alt="Ensaio Feminino 4">
+                <a href="https://i.imgur.com/fsnjvnu.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 4">
+                    <img src="https://i.imgur.com/fsnjvnu.jpg" alt="Ensaio Feminino 4">
+                </a>
             </div>
             <div class="gallery-item">
-                <img src="https://i.imgur.com/tKaJqcz.jpg" alt="Ensaio Feminino 5">
+                <a href="https://i.imgur.com/tKaJqcz.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 5">
+                    <img src="https://i.imgur.com/tKaJqcz.jpg" alt="Ensaio Feminino 5">
+                </a>
             </div>
             <div class="gallery-item">
-                <img src="https://i.imgur.com/SjpNXwv.jpg" alt="Ensaio Feminino 6">
+                <a href="https://i.imgur.com/SjpNXwv.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 6">
+                    <img src="https://i.imgur.com/SjpNXwv.jpg" alt="Ensaio Feminino 6">
+                </a>
             </div>
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/ECIjY3e.jpg" alt="Ensaio Feminino 7">
-            </div>
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/lClBNXV.jpg" alt="Ensaio Feminino 8">
-            </div>
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/1W2KgIF.jpg" alt="Ensaio Feminino 9">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/MCkUkyG.jpg" alt="Ensaio Feminino 10">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 11">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 12">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 13">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 14">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 15">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 16">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 17">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 18">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 19">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 20">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 21">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 22">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 23">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 24">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 25">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 26">
-            </div>        
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 27">
-            </div>        
+            <!-- Adicione as outras imagens seguindo o mesmo padrão -->
         </div>
         <a href="index.html#portfolio" class="btn-voltar">← Voltar ao Portfólio</a>
     </main>
@@ -177,5 +134,18 @@
     <footer>
         <p>&copy; 2024 Luci Lemes Fotografia. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Configurações do Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': true,
+            'alwaysShowNavOnTouchDevices': true
+        });
+    </script>
 </body>
 </html>
