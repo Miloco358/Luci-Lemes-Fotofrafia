@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luci Lemes | Studio Profissional</title>
+    <title>Luci Lemes Fotografia | Studio Profissional</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -33,13 +33,14 @@
         }
         
         header {
-            background: var(--branco);
-            padding: 15px 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            display: flex;
-            justify-cpuntent: center; /* Centralizar */
-            align-items: center;
+            background-color: var(--branco);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
         
         header.scrolled {
@@ -565,6 +566,8 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
+            <h1>LUCI LEMES FOTOGRAFIA</h1>
+            <p>Capturando momentos com sensibilidade e técnica profissional</p>
             <a href="#portfolio" class="btn">Ver Portfólio</a>
             <a href="#contact" class="btn">Agendar Sessão</a>
         </div>
@@ -656,7 +659,7 @@
                 <div class="contact-card" onclick="window.location.href='mailto:lucilemes@gmail.com'">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>professorkauan.lemes@gmail.com</p>
+                    <p>lucilemes@gmail.com</p>
                 </div>
                 <div class="contact-card" onclick="window.location.href='tel:+5544999467947'">
                     <i class="fas fa-phone"></i>
@@ -665,7 +668,7 @@
                 </div>
             </div>
             <div class="contact-form">
-                <form action="https://formsubmit.co/professorkauan.lemes@gmail.com" method="POST">
+                <form action="https://formsubmit.co/lucilemes@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="Novo contato do site">
                     <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
                     <div class="form-group">
