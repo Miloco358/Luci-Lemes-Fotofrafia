@@ -493,19 +493,41 @@
             }
         }
         
+        /* --- HEADER PARA DESKTOP (acima de 768px) --- */
+        @media (min-width: 769px) {
+            .header-container {
+                display: grid;
+                grid-template-columns: 1fr auto 1fr; /* Divide em 3 colunas */
+                align-items: center;
+                padding: 0 40px;
+            }
+        
+            .logo {
+                grid-column: 1; /* Coloca na primeira coluna (esquerda) */
+                justify-self: start; /* Alinha à esquerda */
+                margin: 0;
+            }
+        
+            nav {
+                grid-column: 3; /* Coloca na terceira coluna (direita) */
+                justify-self: end; /* Alinha à direita */
+            }
+        
+            nav ul li {
+                margin-left: 25px; /* Espaço entre itens do menu */
+            }
+        }
+        
+        /* --- MOBILE (mantém igual) --- */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
             }
             
-            nav ul {
-                margin-top: 15px;
+            .logo {
+                margin-bottom: 15px;
             }
-            
-            nav ul li {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
+        }
             
             .hero {
                 margin-top: 60px;
