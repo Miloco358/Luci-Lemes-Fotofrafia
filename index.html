@@ -54,13 +54,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            padding: 0 40px; /* Aumentei o padding lateral */
         }
         
         .logo {
             display: block;
-            height: 60px; /* Ajuste conforme necessário */
+            height: 60px;
             width: auto;
+            margin-right: auto; /* Empurra tudo para direita */
         }
 
         .logo img {
@@ -69,11 +70,12 @@
             max-width: 200px; /* Ajuste conforme necessário */
         }
         
-        nav ul {
+       nav ul {
             display: flex;
             list-style: none;
             margin: 0;
             padding: 0;
+            margin-left: auto; /* Alinha à direita */
         }
         
         nav ul li {
@@ -496,10 +498,14 @@
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
+                padding: 0 20px;
             }
+
+            .logo {
+                margin: 0 auto; /* centraliza no mobile */
             
             nav ul {
-                margin-top: 15px;
+                margin-top: 15px auto 0; /* centraliza no mobile */
             }
             
             nav ul li {
@@ -548,21 +554,21 @@
 </head>
 <body>
     <header id="header">
-        <div class="header-container">
-            <a href="#" class="logo">
-    <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
-</a>
-            <nav>
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#campaigns">Campanhas</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#campaigns">Campanhas</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <section class="hero" id="home">
         <div class="hero-content">
