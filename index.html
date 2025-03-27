@@ -108,11 +108,13 @@
             width: 100%;
         }
         
-                .hero {
+        .hero {
             height: 100vh;
             min-height: 600px;
-            background: url('https://i.imgur.com/HbDuMoV.jpg') no-repeat center 30% cover; /* ADICIONE O 30% AQUI */
+            background-image: url('https://i.imgur.com/HbDuMoV.jpg');
+            background-position: center 30%; /* Ajuste este valor */
             background-size: cover;
+            background-repeat: no-repeat;
             position: relative;
             display: flex;
             align-items: center;
@@ -122,7 +124,7 @@
             margin-top: 70px;
         }
         
-            .hero:before {
+        .hero:before {
             content: '';
             position: absolute;
             top: 0;
@@ -130,7 +132,6 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.6);
-            background-position: center 30%; /* ADICIONE ESTA LINHA */
         }
         
         .hero-content {
