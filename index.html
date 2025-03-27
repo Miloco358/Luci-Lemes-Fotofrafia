@@ -54,19 +54,24 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            padding: 0 40px;
         }
         
         .logo {
             display: block;
-            height: 60px; /* Ajuste conforme necessário */
+            height: 60px;
             width: auto;
+            margin-right: auto; /* Empurra o menu para a direita */
         }
 
         .logo img {
             height: 100%;
             width: auto;
-            max-width: 200px; /* Ajuste conforme necessário */
+            max-width: 200px;
+        }
+        
+        nav {
+            margin-left: auto; /* Garante que o menu fique à direita */
         }
         
         nav ul {
@@ -74,10 +79,11 @@
             list-style: none;
             margin: 0;
             padding: 0;
+            gap: 30px; /* Espaçamento aumentado entre itens */
         }
         
         nav ul li {
-            margin-left: 30px;
+            margin-left: 0; /* Removido o margin-left anterior */
         }
         
         nav ul li a {
@@ -115,7 +121,7 @@
             height: 100vh;
             min-height: 600px;
             background-image: url('https://i.imgur.com/HbDuMoV.jpg');
-            background-position: center 30%; /* Ajuste este valor */
+            background-position: center 30%;
             background-size: cover;
             background-repeat: no-repeat;
             position: relative;
@@ -493,41 +499,27 @@
             }
         }
         
-        /* --- HEADER PARA DESKTOP (acima de 768px) --- */
-        @media (min-width: 769px) {
-            .header-container {
-                display: grid;
-                grid-template-columns: 1fr auto 1fr; /* Divide em 3 colunas */
-                align-items: center;
-                padding: 0 40px;
-            }
-        
-            .logo {
-                grid-column: 1; /* Coloca na primeira coluna (esquerda) */
-                justify-self: start; /* Alinha à esquerda */
-                margin: 0;
-            }
-        
-            nav {
-                grid-column: 3; /* Coloca na terceira coluna (direita) */
-                justify-self: end; /* Alinha à direita */
-            }
-        
-            nav ul li {
-                margin-left: 25px; /* Espaço entre itens do menu */
-            }
-        }
-        
-        /* --- MOBILE (mantém igual) --- */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
+                padding: 0 20px;
             }
             
             .logo {
-                margin-bottom: 15px;
+                margin: 15px 0;
+                margin-right: 0;
             }
-        }
+            
+            nav {
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
             
             .hero {
                 margin-top: 60px;
@@ -565,6 +557,10 @@
             .about-image {
                 height: 250px;
             }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -572,8 +568,8 @@
     <header id="header">
         <div class="header-container">
             <a href="#" class="logo">
-    <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
-</a>
+                <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
+            </a>
             <nav>
                 <ul>
                     <li><a href="#home">Início</a></li>
@@ -588,6 +584,8 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
+            <h1>Luci Lemes Fotografia</h1>
+            <p>Capturando momentos, criando memórias eternas</p>
             <a href="#portfolio" class="btn">Ver Portfólio</a>
             <a href="#contact" class="btn">Agendar Sessão</a>
         </div>
