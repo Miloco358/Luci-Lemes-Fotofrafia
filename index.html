@@ -69,10 +69,10 @@ header {
     background: var(--branco);
     padding: 15px 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center; /* Centralização horizontal do conteúdo */
+    text-align: left; /* Alinhamento à esquerda */
     display: flex;
-    justify-content: center; /* Centralização horizontal (com flexbox) */
-    align-items: center; /* Centralização vertical */
+    justify-content: flex-start; /* Alinha itens à esquerda */
+    align-items: center;
 }
   
 
@@ -103,25 +103,16 @@ padding: 0 20px;
 
 
 .logo {
-
-display: block;
-
-height: 60px; /* Ajuste conforme necessário */
-
-width: auto;
-
+    display: inline-block;
+    height: 50px;
+    margin-right: auto; /* Empurra tudo à direita, deixando a logo colada à esquerda */
 }
 
-
-
 .logo img {
-
-height: 100%;
-
-width: auto;
-
-max-width: 60px; /* Ajuste conforme necessário */
-
+    height: 100%;
+    width: auto;
+    max-width: 180px;
+    margin-left: 10px; /* Opcional: pequeno espaço da borda esquerda */
 }
 
 
