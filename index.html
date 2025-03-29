@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luci Lemes Fotografia | Studio Profissional</title>
-    <link rel="icon" href="https://i.imgur.com/8But6ui.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -59,15 +58,12 @@
         }
         
         .logo {
-            display: block;
-            height: 60px;
-            width: auto;
-        }
-
-        .logo img {
-            height: 100%;
-            width: auto;
-            max-width: 200px;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--preto);
+            text-decoration: none;
+            letter-spacing: 1px;
         }
         
         nav ul {
@@ -78,7 +74,7 @@
         }
         
         nav ul li {
-            margin-left: 20px;
+            margin-left: 30px;
         }
         
         nav ul li a {
@@ -105,7 +101,7 @@
             background: var(--preto);
             bottom: 0;
             left: 0;
-            transition: width 0.1s;
+            transition: width 0.3s;
         }
         
         nav ul li a:hover:after {
@@ -115,10 +111,8 @@
         .hero {
             height: 100vh;
             min-height: 600px;
-            background-image: url('https://i.imgur.com/HbDuMoV.jpg');
-            background-position: center 30%;
+            background: url('fotos/hero-background.jpg') no-repeat center center;
             background-size: cover;
-            background-repeat: no-repeat;
             position: relative;
             display: flex;
             align-items: center;
@@ -170,7 +164,6 @@
             border: 2px solid var(--branco);
             text-transform: uppercase;
             font-size: 12px;
-            margin: 0 10px;
         }
         
         .btn:hover {
@@ -329,7 +322,7 @@
         
         .about-image {
             height: 400px;
-            background: url('https://i.imgur.com/uZJjP6p.jpg') no-repeat center center;
+            background: url('fotos/sobre.jpg') no-repeat center center;
             background-size: cover;
         }
         
@@ -453,4 +446,308 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            background-color: rgba(255, 255
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--branco);
+            border-radius: 50%;
+            line-height: 40px;
+            margin: 0 8px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--branco);
+            color: var(--preto);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            color: var(--cinza-claro);
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .about-image {
+                height: 350px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            nav ul li {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            
+            .hero {
+                margin-top: 60px;
+                min-height: 500px;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 220px;
+            }
+            
+            .portfolio-item {
+                height: 280px;
+            }
+            
+            .contact-form {
+                padding: 25px;
+            }
+            
+            .contact-card {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav ul li a {
+                font-size: 12px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-container">
+            <a href="#" class="logo">LUCI LEMES</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#campaigns">Campanhas</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>LUCI LEMES FOTOGRAFIA</h1>
+            <p>Capturando momentos com sensibilidade e técnica profissional</p>
+            <a href="#portfolio" class="btn">Ver Portfólio</a>
+            <a href="#contact" class="btn">Agendar Sessão</a>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Portfólio</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="fotos/retratos-mulheres.jpg" alt="Retratos de Mulheres">
+                    <div class="portfolio-overlay">
+                        <h3>Retratos de Mulheres</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="fotos/moda.jpg" alt="Moda">
+                    <div class="portfolio-overlay">
+                        <h3>Moda</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="fotos/campanhas-publicitarias.jpg" alt="Campanhas Publicitárias">
+                    <div class="portfolio-overlay">
+                        <h3>Campanhas Publicitárias</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="campaigns" id="campaigns">
+        <div class="container">
+            <div class="section-title">
+                <h2>Campanhas</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="campaign-card">
+                    <img src="fotos/dia-das-maes.jpg" alt="Dia das Mães">
+                    <div class="campaign-content">
+                        <span class="date">Maio 2025</span>
+                        <h3>Dia das Mães</h3>
+                        <p>Sessão especial para celebrar o amor materno.</p>
+                        <a href="#contact" class="btn btn-dark" style="padding: 10px 20px; font-size: 12px;">Agendar</a>
+                    </div>
+                </div>
+                <div class="campaign-card">
+                    <img src="fotos/gestante.jpg" alt="Gestante">
+                    <div class="campaign-content">
+                        <span class="date">Todo o ano</span>
+                        <h3>Gestante</h3>
+                        <p>Registre esse momento mágico da sua vida.</p>
+                        <a href="#contact" class="btn btn-dark" style="padding: 10px 20px; font-size: 12px;">Agendar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Luci Lemes é uma fotógrafa profissional com mais de três décadas de experiência no mercado. Seu trabalho combina técnica apurada com sensibilidade artística para criar imagens que contam histórias e evocam emoções.</p>
+                    <p>Especializada em retratos femininos, moda e campanhas publicitárias, desenvolveu um estilo único que valoriza a essência de cada pessoa e projeto.</p>
+                    <p>Com vasta experiência em estúdio e locações externas, seu trabalho já foi destaque em diversas publicações e campanhas de marcas renomadas.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contato</h2>
+            </div>
+            <div class="contact-info">
+                <div class="contact-card" onclick="window.location.href='https://maps.google.com?q=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220'">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Localização</h3>
+                    <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
+                </div>
+                <div class="contact-card" onclick="window.location.href='mailto:lucilemes@gmail.com'">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>lucilemes@gmail.com</p>
+                </div>
+                <div class="contact-card" onclick="window.location.href='tel:+5544999467947'">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefone</h3>
+                    <p>(44) 99946-7947</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="https://formsubmit.co/lucilemes@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Novo contato do site">
+                    <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark" style="border: none; width: 100%; padding: 15px; letter-spacing: 2px;">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#" class="footer-logo">LUCI LEMES</a>
+        <div class="social-links">
+            <a href="https://facebook.com/LuciLemes" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/luci_lemes_fotografa" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5544999467947" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Luci Lemes Fotografia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Mensagem enviada com sucesso!');
+                        form.reset();
+                    } else {
+                        throw new Error('Erro ao enviar mensagem');
+                    }
+                })
+                .catch(error => {
+                    alert('Ocorreu um erro. Por favor, tente novamente mais tarde.');
+                    console.error(error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
