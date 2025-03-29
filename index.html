@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luci Lemes Fotografia | Studio Profissional</title>
+    <link rel="icon" href="https://i.imgur.com/8But6ui.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -34,7 +35,7 @@
         
         header {
             background-color: var(--branco);
-            padding: 20px 0;
+            padding: 0px 20;
             position: fixed;
             width: 100%;
             top: 0;
@@ -58,12 +59,15 @@
         }
         
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--preto);
-            text-decoration: none;
-            letter-spacing: 1px;
+            display: block;
+            height: 60px; /* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            max-width: 200px; /* Ajuste conforme necessário */
         }
         
         nav ul {
@@ -74,7 +78,7 @@
         }
         
         nav ul li {
-            margin-left: 30px;
+            margin-left: 20px;
         }
         
         nav ul li a {
@@ -101,7 +105,7 @@
             background: var(--preto);
             bottom: 0;
             left: 0;
-            transition: width 0.3s;
+            transition: width 0.1s;
         }
         
         nav ul li a:hover:after {
@@ -111,8 +115,10 @@
         .hero {
             height: 100vh;
             min-height: 600px;
-            background: url('fotos/hero-background.jpg') no-repeat center center;
+            background-image: url('https://i.imgur.com/HbDuMoV.jpg');
+            background-position: center 30%; /* Ajuste este valor */
             background-size: cover;
+            background-repeat: no-repeat;
             position: relative;
             display: flex;
             align-items: center;
@@ -322,7 +328,7 @@
         
         .about-image {
             height: 400px;
-            background: url('fotos/sobre.jpg') no-repeat center center;
+            background: url('https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80') no-repeat center center;
             background-size: cover;
         }
         
@@ -544,7 +550,9 @@
 <body>
     <header id="header">
         <div class="header-container">
-            <a href="#" class="logo">LUCI LEMES</a>
+            <a href="#" class="logo">
+    <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
+</a>
             <nav>
                 <ul>
                     <li><a href="#home">Início</a></li>
@@ -573,19 +581,19 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="fotos/retratos-mulheres.jpg" alt="Retratos de Mulheres">
-                    <div class="portfolio-overlay">
-                        <h3>Retratos de Mulheres</h3>
-                    </div>
+                    <a href="ensaios-femininos.html" class="portfolio-link">
+                        <img src="https://i.imgur.com/HbDuMoV.jpg" alt="Ensaios Femininos">
+                        <div class="portfolio-overlay"><h3>Ensaios Femininos</h3></div>
+                    </a>
                 </div>
                 <div class="portfolio-item">
-                    <img src="fotos/moda.jpg" alt="Moda">
+                    <img src="https://i.imgur.com/FxWonnE.jpg" alt="Moda">
                     <div class="portfolio-overlay">
                         <h3>Moda</h3>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="fotos/campanhas-publicitarias.jpg" alt="Campanhas Publicitárias">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Campanhas Publicitárias">
                     <div class="portfolio-overlay">
                         <h3>Campanhas Publicitárias</h3>
                     </div>
@@ -601,7 +609,7 @@
             </div>
             <div class="portfolio-grid">
                 <div class="campaign-card">
-                    <img src="fotos/dia-das-maes.jpg" alt="Dia das Mães">
+                    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dia das Mães">
                     <div class="campaign-content">
                         <span class="date">Maio 2025</span>
                         <h3>Dia das Mães</h3>
@@ -610,7 +618,7 @@
                     </div>
                 </div>
                 <div class="campaign-card">
-                    <img src="fotos/gestante.jpg" alt="Gestante">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Gestante">
                     <div class="campaign-content">
                         <span class="date">Todo o ano</span>
                         <h3>Gestante</h3>
@@ -633,7 +641,7 @@
                     <p>Especializada em retratos femininos, moda e campanhas publicitárias, desenvolveu um estilo único que valoriza a essência de cada pessoa e projeto.</p>
                     <p>Com vasta experiência em estúdio e locações externas, seu trabalho já foi destaque em diversas publicações e campanhas de marcas renomadas.</p>
                 </div>
-                <div class="about-image"></div>
+                <div class="about-image" style="background: url('https://i.imgur.com/uZJjP6p.jpg') no-repeat center center; background-size: cover;"></div>
             </div>
         </div>
     </section>
@@ -649,10 +657,10 @@
                     <h3>Localização</h3>
                     <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
                 </div>
-                <div class="contact-card" onclick="window.location.href='mailto:lucilemes@gmail.com'">
+                <div class="contact-card" onclick="window.location.href='mailto:luci-lemes@hotmail.com'">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>lucilemes@gmail.com</p>
+                    <p>luci-lemes@hotmail.com</p>
                 </div>
                 <div class="contact-card" onclick="window.location.href='tel:+5544999467947'">
                     <i class="fas fa-phone"></i>
@@ -661,7 +669,7 @@
                 </div>
             </div>
             <div class="contact-form">
-                <form action="https://formsubmit.co/lucilemes@gmail.com" method="POST">
+                <form action="https://formsubmit.co/luci-lemes@hotmail.com" method="POST">
                     <input type="hidden" name="_subject" value="Novo contato do site">
                     <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
                     <div class="form-group">
@@ -689,7 +697,7 @@
     <footer>
         <a href="#" class="footer-logo">LUCI LEMES</a>
         <div class="social-links">
-            <a href="https://facebook.com/LuciLemes" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/share/166Ayv4cAZ/" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://instagram.com/luci_lemes_fotografa" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/5544999467947" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
