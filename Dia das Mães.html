@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia das Mães | Luci Lemes Fotografia</title>
+    <link rel="icon" href="https://i.imgur.com/8But6ui.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        :root {
+            --preto: #000000;
+            --branco: #FFFFFF;
+            --cinza-escuro: #222222;
+            --rosa-claro: #fff0f5;
+            --rosa-escuro: #d87093;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--cinza-escuro);
+            background-color: var(--rosa-claro);
+        }
+        header {
+            background: var(--branco);
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 3px solid var(--rosa-escuro);
+        }
+        .logo {
+            display: inline-block;
+            height: 50px;
+        }
+        .logo img {
+            height: 100%;
+            width: auto;
+            max-width: 180px;
+        }
+        .gallery-page {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--rosa-escuro);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        h1:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--rosa-escuro);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            height: 350px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            position: relative;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(216, 112, 147, 0.3);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: zoom-in;
+        }
+        .gallery-item:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(216, 112, 147, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover:after {
+            opacity: 1;
+        }
+        .btn-voltar {
+            display: block;
+            margin: 40px auto 0;
+            padding: 12px 30px;
+            background: var(--rosa-escuro);
+            color: var(--branco);
+            text-align: center;
+            width: fit-content;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 500;
+            border: 2px solid var(--rosa-escuro);
+        }
+        .btn-voltar:hover {
+            background: transparent;
+            color: var(--rosa-escuro);
+        }
+        footer {
+            background: var(--rosa-escuro);
+            color: var(--branco);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                height: 280px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes">
+        </a>
+    </header>
+
+    <main class="gallery-page">
+        <h1>Dia das Mães</h1>
+        <div class="intro-text">
+            <p>Celebre o amor incondicional entre mães e filhos com uma sessão fotográfica especial. Cada imagem captura a beleza e a conexão única desta relação tão especial. Agende sua sessão e eternize momentos que ficarão para sempre em seu coração.</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <!-- Galeria com Lightbox - Substitua pelas suas imagens reais -->
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/DNFBW7c.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
+                    <img src="https://i.imgur.com/DNFBW7c.jpg" alt="Dia das Mães 01">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/KtyD6vC.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
+                    <img src="https://i.imgur.com/KtyD6vC.jpg" alt="Dia das Mães 02">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/zgYroYM.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
+                    <img src="https://i.imgur.com/zgYroYM.jpg" alt="Dia das Mães 03">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/pVEDKd3.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
+                    <img src="https://i.imgur.com/pVEDKd3.jpg" alt="Dia das Mães 04">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/q5hnl9c.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
+                    <img src="https://i.imgur.com/q5hnl9c.jpg" alt="Dia das Mães 05">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/tKaJqcz.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
+                    <img src="https://i.imgur.com/tKaJqcz.jpg" alt="Gestante segurando ultrassom">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/SjpNXwv.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
+                    <img src="https://i.imgur.com/SjpNXwv.jpg" alt="Mãe e filha rindo">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/lClBNXV.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
+                    <img src="https://i.imgur.com/lClBNXV.jpg" alt="Família em preto e branco">
+                </a>
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+        
+        <a href="index.html#portfolio" class="btn-voltar">← Voltar ao Portfólio</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Luci Lemes Fotografia. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Configurações do Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': true,
+            'alwaysShowNavOnTouchDevices': true,
+            'fadeDuration': 300
+        });
+    </script>
+</body>
+</html>
