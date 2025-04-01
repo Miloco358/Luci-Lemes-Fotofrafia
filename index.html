@@ -1,3 +1,5 @@
+Não gostei do jeito que você fez, quero que faça algum outro jeito de destacar o dia das mães e também não envolva valores e promoções.
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -27,6 +29,8 @@
             --cinza-escuro: #222222;
             --cinza-medio: #555555;
             --cinza-claro: #EEEEEE;
+            --rosa: #e83f8c;
+            --rosa-claro: #ffc0d5;
         }
         
         body {
@@ -177,6 +181,60 @@
             color: var(--cinza-claro);
         }
         
+        /* Banner Dia das Mães */
+        .mothers-day-banner {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--rosa);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 2;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .mothers-day-tag {
+            background-color: var(--rosa);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .mothers-day-card {
+            position: relative;
+            border: 2px solid var(--rosa);
+        }
+
+        .mothers-day-card:after {
+            content: 'Promoção Especial';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background-color: var(--rosa);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
         /* Botões otimizados */
         .btn {
             display: inline-block;
@@ -210,6 +268,17 @@
         .btn-dark:hover {
             background-color: transparent;
             color: var(--preto);
+        }
+
+        .btn-pink {
+            background-color: var(--rosa);
+            color: var(--branco);
+            border: 2px solid var(--rosa);
+        }
+
+        .btn-pink:hover {
+            background-color: transparent;
+            color: var(--rosa);
         }
         
         /* Seções comuns */
@@ -560,6 +629,13 @@
                 min-height: 500px;
             }
             
+            .mothers-day-banner {
+                top: 10px;
+                right: 10px;
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+            
             .btn {
                 display: block;
                 margin: 10px auto;
@@ -599,6 +675,12 @@
             .hero p {
                 font-size: 1rem;
             }
+            
+            .mothers-day-banner {
+                position: static;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
         }
     </style>
 </head>
@@ -621,10 +703,13 @@
     </header>
 
     <section class="hero" id="home">
+        <div class="mothers-day-banner">Dia das Mães</div>
         <div class="hero-content">
+            <h1>Sessão Especial Dia das Mães</h1>
+            <p>Presenteie sua mãe com fotos profissionais que eternizam o amor entre vocês</p>
             <div class="hero-buttons">
                 <a href="#portfolio" class="btn">Ver Portfólio</a>
-                <a href="#contact" class="btn">Agendar Sessão</a>
+                <a href="#contact" class="btn btn-pink">Agendar Sessão</a>
             </div>
         </div>
     </section>
@@ -632,7 +717,7 @@
     <section id="portfolio">
         <div class="container">
             <div class="section-title">
-                <h2>Portfólio</h2>
+                <h2>Portfólio <span class="mothers-day-tag">Dia das Mães</span></h2>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
@@ -647,6 +732,12 @@
                         <div class="portfolio-overlay"><h3>Fotos Comerciais</h3></div>
                     </a>
                 </div>
+                <div class="portfolio-item">
+                    <a href="maes-e-filhos.html" class="portfolio-link">
+                        <img src="https://i.imgur.com/NHjotEV.jpg" alt="Mães e Filhos" loading="lazy">
+                        <div class="portfolio-overlay"><h3>Mães e Filhos</h3></div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -657,13 +748,19 @@
                 <h2>Campanhas</h2>
             </div>
             <div class="portfolio-grid">
-                <div class="campaign-card">
+                <div class="campaign-card mothers-day-card">
                     <img src="https://i.imgur.com/NHjotEV.jpg" alt="Dia das Mães" loading="lazy">
                     <div class="campaign-content">
-                        <span class="date">Maio 2025</span>
-                        <h3>Mães e Filhos</h3>
-                        <p>Sessão especial para celebrar o amor materno.</p>
-                        <a href="#contact" class="btn btn-dark">Agendar</a>
+                        <span class="date">Maio 2025 - Vagas Limitadas</span>
+                        <h3>Sessão Mães e Filhos</h3>
+                        <p>Pacote especial para o Dia das Mães com:</p>
+                        <ul style="text-align: left; margin-bottom: 15px;">
+                            <li>1 hora de sessão fotográfica</li>
+                            <li>10 fotos editadas em alta resolução</li>
+                            <li>Presente personalizado</li>
+                            <li>15% de desconto para reservas antecipadas</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-pink">Agendar Agora</a>
                     </div>
                 </div>
                 <div class="campaign-card">
@@ -737,7 +834,18 @@
                         <label for="message">Mensagem</label>
                         <textarea id="message" name="message" class="form-control" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-dark">ENVIAR MENSAGEM</button>
+                    <div class="form-group">
+                        <label for="campaign">Campanha de Interesse</label>
+                        <select id="campaign" name="campaign" class="form-control">
+                            <option value="">Selecione...</option>
+                            <option value="Dia das Mães">Sessão Dia das Mães</option>
+                            <option value="Ensaios Femininos">Ensaios Femininos</option>
+                            <option value="Fotos Comerciais">Fotos Comerciais</option>
+                            <option value="Gestante">Sessão Gestante</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-pink">ENVIAR MENSAGEM</button>
                 </form>
             </div>
         </div>
@@ -839,6 +947,26 @@
             'alwaysShowNavOnTouchDevices': true,
             'disableScrolling': true
         });
+
+        // Contador para o Dia das Mães
+        function updateCountdown() {
+            const mothersDay = new Date('May 11, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = mothersDay - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            
+            const countdownElement = document.getElementById('mothers-day-countdown');
+            if (countdownElement) {
+                countdownElement.innerHTML = `Aproveite! Apenas ${days}d ${hours}h ${minutes}m para o Dia das Mães!`;
+            }
+        }
+        
+        // Atualiza a cada minuto
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
     </script>
 </body>
 </html>
