@@ -3,20 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luci Lemes Fotografia | Studio Profissional</title>
-    <meta name="description" content="Fotógrafa profissional especializada em ensaios femininos, fotos comerciais e campanhas publicitárias em Umuarama/PR">
-    <!-- Favicon e pré-carregamentos -->
+    <title>Seu Nome | Fotografia Profissional</title>
+    <meta name="description" content="Fotógrafo profissional especializado em ensaios, fotos comerciais e campanhas publicitárias.">
     <link rel="icon" href="https://i.imgur.com/8But6ui.png" type="image/png">
     <link rel="preload" href="https://i.imgur.com/5SJzSNu.png" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://i.imgur.com">
-
-    <!-- Fontes e ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Lightbox CSS otimizado -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 
     <style>
@@ -44,7 +39,6 @@
             margin-top: 0;
         }
         
-        /* Header otimizado */
         header {
             background-color: var(--branco);
             padding: 15px 0;
@@ -70,14 +64,8 @@
             padding: 0 40px;
         }
         
-        .logo {
-            display: block;
-            height: 50px;
-            width: auto;
-        }
-
         .logo img {
-            height: 100%;
+            height: 50px;
             width: auto;
             max-width: 180px;
             transition: transform 0.3s;
@@ -129,14 +117,12 @@
             width: 100%;
         }
         
-        /* Hero section otimizada */
         .hero {
             height: 100vh;
             min-height: 600px;
             background-image: url('https://i.imgur.com/HbDuMoV.jpg');
             background-position: center 30%;
             background-size: cover;
-            background-repeat: no-repeat;
             position: relative;
             display: flex;
             align-items: center;
@@ -176,7 +162,6 @@
             color: var(--cinza-claro);
         }
         
-        /* Botões otimizados */
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -200,18 +185,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
-        .btn-dark {
-            background-color: var(--preto);
-            color: var(--branco);
-            border: 2px solid var(--preto);
-        }
-        
-        .btn-dark:hover {
-            background-color: transparent;
-            color: var(--preto);
-        }
-        
-        /* Seções comuns */
         section {
             padding: 80px 0;
             scroll-margin-top: 80px;
@@ -246,7 +219,6 @@
             padding: 0 20px;
         }
         
-        /* Galeria otimizada */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -299,179 +271,6 @@
             padding: 0 15px;
         }
         
-        /* Campanhas - Estilo modificado para imagens completas */
-        .campaigns {
-            background-color: var(--cinza-claro);
-        }
-        
-        .campaign-card {
-            background-color: var(--branco);
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: none;
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-        }
-        
-        .campaign-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .campaign-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        
-        .campaign-content {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .campaign-content h3 {
-            margin-top: 0;
-            color: var(--preto);
-            font-size: 1.2rem;
-        }
-        
-        .campaign-content .date {
-            color: var(--cinza-medio);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        /* Sobre */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .about-text {
-            padding-right: 20px;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-        
-        .about-image {
-            height: 400px;
-            background: url('https://i.imgur.com/uZJjP6p.jpg') no-repeat center center;
-            background-size: cover;
-            border-radius: 5px;
-        }
-        
-        /* Contato */
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-        
-        .contact-card {
-            background-color: var(--cinza-claro);
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        
-        .contact-card:hover {
-            background-color: var(--preto);
-            color: var(--branco);
-            transform: translateY(-5px);
-        }
-        
-        .contact-card:hover h3,
-        .contact-card:hover p,
-        .contact-card:hover i {
-            color: var(--branco);
-        }
-        
-        .contact-card i {
-            font-size: 2rem;
-            color: var(--preto);
-            margin-bottom: 15px;
-            transition: color 0.3s;
-        }
-        
-        .contact-card h3 {
-            margin-top: 0;
-            transition: color 0.3s;
-            font-size: 1.2rem;
-        }
-        
-        .contact-card p {
-            margin-bottom: 0;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        
-        .contact-card a {
-            color: inherit;
-            text-decoration: none;
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .contact-form {
-            background-color: var(--branco);
-            padding: 40px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--cinza-claro);
-            border-radius: 5px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--preto);
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--cinza-claro);
-            font-family: 'Montserrat', sans-serif;
-            transition: all 0.3s;
-            background-color: var(--branco);
-            color: var(--preto);
-            font-size: 15px;
-            border-radius: 4px;
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--preto);
-            box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        /* Footer */
         footer {
             background-color: var(--preto);
             color: var(--branco);
@@ -521,21 +320,7 @@
             letter-spacing: 1px;
         }
         
-        /* Responsividade */
         @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-text {
-                padding-right: 0;
-                margin-bottom: 30px;
-            }
-            
-            .about-image {
-                height: 350px;
-            }
-            
             section {
                 padding: 60px 0;
             }
@@ -547,70 +332,14 @@
                 padding: 0 20px;
             }
             
-            .logo {
-                margin-bottom: 15px;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 0 10px;
-            }
-            
-            .hero {
-                margin-top: 70px;
-                min-height: 500px;
-            }
-            
-            .btn {
-                display: block;
-                margin: 10px auto;
-                max-width: 220px;
-            }
-            
             .portfolio-item {
                 height: 280px;
-            }
-            
-            .contact-form {
-                padding: 25px;
-            }
-            
-            .contact-card {
-                padding: 20px;
-            }
-            
-            .campaign-image {
-                height: 200px;
             }
         }
         
         @media (max-width: 480px) {
             nav ul li a {
                 font-size: 12px;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-image {
-                height: 250px;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .campaign-image {
-                height: 180px;
             }
         }
     </style>
@@ -619,7 +348,7 @@
 <header id="header">
     <div class="header-container">
         <a href="#" class="logo">
-            <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
+            <img src="https://i.imgur.com/5SJzSNu.png" alt="Seu Nome Fotografia">
         </a>
         <nav>
             <ul>
@@ -634,6 +363,8 @@
 </header>
 <section class="hero" id="home">
     <div class="hero-content">
+        <h1>Seu Nome</h1>
+        <p>Fotógrafo profissional especializado em ensaios e campanhas publicitárias.</p>
         <div class="hero-buttons">
             <a href="#portfolio" class="btn">Ver Portfólio</a>
             <a href="#contact" class="btn">Agendar Sessão</a>
@@ -648,7 +379,7 @@
         </div>
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <a href="Fotos-comerciais.html" class="portfolio-link">
+                <a href="fotos-comerciais.html" class="portfolio-link">
                     <img src="https://i.imgur.com/mQoc68c.jpg" alt="Fotos Comerciais" loading="lazy">
                     <div class="portfolio-overlay"><h3>Fotos Comerciais</h3></div>
                 </a>
@@ -734,11 +465,11 @@
         </div>
         <div class="about-content">
             <div class="about-text">
-                <p>Luci Lemes é uma fotógrafa profissional com mais de três décadas de experiência no mercado. Seu trabalho combina técnica apurada com sensibilidade artística para criar imagens que contam histórias e evocam emoções.</p>
-                <p>Especializada em retratos femininos, moda e campanhas publicitárias, desenvolveu um estilo único que valoriza a essência de cada pessoa e projeto.</p>
+                <p>Seu Nome é um fotógrafo profissional com mais de uma década de experiência no mercado. Seu trabalho combina técnica apurada com sensibilidade artística para criar imagens que contam histórias e evocam emoções.</p>
+                <p>Especializado em retratos, moda e campanhas publicitárias, desenvolveu um estilo único que valoriza a essência de cada pessoa e projeto.</p>
                 <p>Com vasta experiência em estúdio e locações externas, seu trabalho já foi destaque em diversas publicações e campanhas de marcas renomadas.</p>
             </div>
-            <div class="about-image"></div>
+            <div class="about-image" style="background: url('https://i.imgur.com/uZJjP6p.jpg') no-repeat center center; background-size: cover;"></div>
         </div>
     </div>
 </section>
@@ -749,26 +480,26 @@
             <h2>Contato</h2>
         </div>
         <div class="contact-info">
-            <div class="contact-card" onclick="window.location.href='https://maps.google.com?q=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220'">
+            <div class="contact-card" onclick="window.location.href='https://maps.google.com?q=Seu+Endereço'">
                 <i class="fas fa-map-marker-alt"></i>
                 <h3>Localização</h3>
-                <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
+                <p>Seu Estúdio<br>Seu Endereço<br>Cidade - Estado, CEP</p>
             </div>
-            <div class="contact-card" onclick="window.location.href='mailto:contatolucilemes@gmail.com'">
+            <div class="contact-card" onclick="window.location.href='mailto:seuemail@exemplo.com'">
                 <i class="fas fa-envelope"></i>
                 <h3>Email</h3>
-                <p>contatolucilemes@gmail.com</p>
+                <p>seuemail@exemplo.com</p>
             </div>
-            <div class="contact-card" onclick="window.location.href='tel:+5544999467947'">
+            <div class="contact-card" onclick="window.location.href='tel:+55XXXXXXXXXXX'">
                 <i class="fas fa-phone"></i>
                 <h3>Telefone</h3>
-                <p>(44) 99946-7947</p>
+                <p>(XX) XXXXX-XXXX</p>
             </div>
         </div>
         <div class="contact-form">
-            <form action="https://formsubmit.co/contatolucilemes@gmail.com" method="POST">
+            <form action="https://formsubmit.co/seuemail@exemplo.com" method="POST">
                 <input type="hidden" name="_subject" value="Novo contato do site">
-                <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
+                <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input type="text" id="name" name="name" class="form-control" required>
@@ -792,22 +523,19 @@
 </section>
 
 <footer>
-    <a href="#" class="footer-logo">LUCI LEMES</a>
+    <a href="#" class="footer-logo">SEU NOME</a>
     <div class="social-links">
-        <a href="https://www.facebook.com/share/166Ayv4cAZ/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/luci_lemes_fotografa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/5544999467947" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
     <div class="copyright">
-        &copy; 2025 Luci Lemes Fotografia. Todos os direitos reservados.
+        &copy; 2025 Seu Nome Fotografia. Todos os direitos reservados.
     </div>
 </footer>
 
-<!-- Lightbox JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
 <script>
-    // Header scroll effect
     window.addEventListener('scroll', function() {
         const header = document.getElementById('header');
         if (window.scrollY > 50) {
@@ -817,21 +545,16 @@
         }
     });
     
-    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
             if (targetElement) {
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
-                
-                // Atualiza a URL sem recarregar a página
                 if (history.pushState) {
                     history.pushState(null, null, targetId);
                 } else {
@@ -841,18 +564,14 @@
         });
     });
 
-    // Form submission
     const form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             const submitButton = form.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
-            
-            // Feedback visual
             submitButton.disabled = true;
             submitButton.textContent = 'Enviando...';
-            
             fetch(form.action, {
                 method: 'POST',
                 body: new FormData(form),
@@ -879,7 +598,6 @@
         });
     }
     
-    // Lightbox config
     lightbox.option({
         'resizeDuration': 200,
         'wrapAround': true,
