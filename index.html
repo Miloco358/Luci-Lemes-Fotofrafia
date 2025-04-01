@@ -3,218 +3,884 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grávida | Luci Lemes Fotografia</title>
+    <title>Luci Lemes Fotografia | Studio Profissional</title>
+    <meta name="description" content="Fotógrafa profissional especializada em ensaios femininos, fotos comerciais e campanhas publicitárias em Umuarama/PR">
+    <!-- Favicon e pré-carregamentos -->
     <link rel="icon" href="https://i.imgur.com/8But6ui.png" type="image/png">
+    <link rel="preload" href="https://i.imgur.com/5SJzSNu.png" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://i.imgur.com">
+
+    <!-- Fontes e ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Lightbox CSS -->
+
+    <!-- Lightbox CSS otimizado -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
     <style>
         :root {
             --preto: #000000;
             --branco: #FFFFFF;
             --cinza-escuro: #222222;
+            --cinza-medio: #555555;
+            --cinza-claro: #EEEEEE;
         }
+        
         body {
             font-family: 'Montserrat', sans-serif;
+            background-color: var(--branco);
+            color: var(--cinza-escuro);
             margin: 0;
             padding: 0;
-            color: var(--cinza-escuro);
+            line-height: 1.8;
         }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--preto);
+            margin-top: 0;
+        }
+        
+        /* Header otimizado */
         header {
-            background: var(--branco);
-            padding: 15px 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: var(--branco);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
+        
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+        
         .logo {
-            display: inline-block;
+            display: block;
             height: 50px;
+            width: auto;
         }
 
         .logo img {
             height: 100%;
             width: auto;
             max-width: 180px;
+            transition: transform 0.3s;
         }
-        .gallery-page {
-            padding: 80px 20px;
+        
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: var(--preto);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+        
+        nav ul li a:hover {
+            color: var(--cinza-medio);
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--preto);
+            bottom: 0;
+            left: 0;
+            transition: width 0.2s ease-out;
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero section otimizada */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            background-image: url('https://i.imgur.com/HbDuMoV.jpg');
+            background-position: center 30%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--branco);
+            margin-top: 80px;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            color: var(--branco);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 30px;
+            color: var(--cinza-claro);
+        }
+        
+        /* Botões otimizados */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: transparent;
+            color: var(--branco);
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 500;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--branco);
+            text-transform: uppercase;
+            font-size: 12px;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            background-color: var(--branco);
+            color: var(--preto);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-dark {
+            background-color: var(--preto);
+            color: var(--branco);
+            border: 2px solid var(--preto);
+        }
+        
+        .btn-dark:hover {
+            background-color: transparent;
+            color: var(--preto);
+        }
+        
+        /* Seções comuns */
+        section {
+            padding: 80px 0;
+            scroll-margin-top: 80px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: var(--preto);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
-        h1 {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .gallery-grid {
+        
+        /* Galeria otimizada */
+        .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
         }
-        .gallery-item {
-            height: 350px;
+        
+        .portfolio-item {
+            position: relative;
             overflow: hidden;
+            height: 350px;
             border-radius: 5px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
         }
-        .gallery-item:hover {
-            transform: translateY(-5px);
-        }
-        .gallery-item img {
+        
+        .portfolio-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            cursor: zoom-in;
+            transition: transform 0.5s ease;
         }
-        .btn-voltar {
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-overlay h3 {
+            color: var(--branco);
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0 15px;
+        }
+        
+        /* Campanhas - Estilo modificado para imagens completas */
+        .campaigns {
+            background-color: var(--cinza-claro);
+        }
+        
+        .campaign-card {
+            background-color: var(--branco);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+        
+        .campaign-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .campaign-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .campaign-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .campaign-content h3 {
+            margin-top: 0;
+            color: var(--preto);
+            font-size: 1.2rem;
+        }
+        
+        .campaign-content .date {
+            color: var(--cinza-medio);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
             display: block;
-            margin: 40px auto 0;
-            padding: 12px 30px;
-            background: var(--preto);
-            color: var(--branco);
-            text-align: center;
-            width: fit-content;
-            text-decoration: none;
+        }
+
+        /* Sobre */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text {
+            padding-right: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            height: 400px;
+            background: url('https://i.imgur.com/uZJjP6p.jpg') no-repeat center center;
+            background-size: cover;
             border-radius: 5px;
-            transition: background 0.3s;
         }
-        .btn-voltar:hover {
-            background: #333;
+        
+        /* Contato */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
         }
-        footer {
-            background: var(--preto);
-            color: var(--branco);
-            text-align: center;
+        
+        .contact-card {
+            background-color: var(--cinza-claro);
             padding: 30px;
-            margin-top: 50px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .contact-card:hover {
+            background-color: var(--preto);
+            color: var(--branco);
+            transform: translateY(-5px);
+        }
+        
+        .contact-card:hover h3,
+        .contact-card:hover p,
+        .contact-card:hover i {
+            color: var(--branco);
+        }
+        
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--preto);
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+        
+        .contact-card h3 {
+            margin-top: 0;
+            transition: color 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .contact-card p {
+            margin-bottom: 0;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .contact-card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .contact-form {
+            background-color: var(--branco);
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--cinza-claro);
+            border-radius: 5px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--preto);
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--cinza-claro);
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+            background-color: var(--branco);
+            color: var(--preto);
+            font-size: 15px;
+            border-radius: 4px;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--preto);
+            box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--preto);
+            color: var(--branco);
+            padding: 60px 0 25px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--branco);
+            text-decoration: none;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+        
+        .social-links {
+            margin: 25px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--branco);
+            border-radius: 50%;
+            line-height: 40px;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--branco);
+            color: var(--preto);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            color: var(--cinza-claro);
+            letter-spacing: 1px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .about-image {
+                height: 350px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero {
+                margin-top: 70px;
+                min-height: 500px;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 220px;
+            }
+            
+            .portfolio-item {
+                height: 280px;
+            }
+            
+            .contact-form {
+                padding: 25px;
+            }
+            
+            .contact-card {
+                padding: 20px;
+            }
+            
+            .campaign-image {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav ul li a {
+                font-size: 12px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 250px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .campaign-image {
+                height: 180px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">
-            <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes">
+<header id="header">
+    <div class="header-container">
+        <a href="#" class="logo">
+            <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
         </a>
-    </header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#campaigns">Campanhas</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-buttons">
+            <a href="#portfolio" class="btn">Ver Portfólio</a>
+            <a href="#contact" class="btn">Agendar Sessão</a>
+        </div>
+    </div>
+</section>
 
-    <main class="gallery-page">
-        <h1>Grávida</h1>
-        <div class="gallery-grid">
-            <!-- Galeria com Lightbox -->
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/PYHYSAe.jpg" data-lightbox="gravida" data-title="Grávida 1">
-                    <img src="https://i.imgur.com/PYHYSAe.jpg" alt="Grávida 1">
+<section id="portfolio">
+    <div class="container">
+        <div class="section-title">
+            <h2>Portfólio</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <a href="ensaios-femininos.html" class="portfolio-link">
+                    <img src="https://i.imgur.com/9dZyP7H.jpg" alt="Ensaios Femininos" loading="lazy">
+                    <div class="portfolio-overlay"><h3>Ensaios Femininos</h3></div>
                 </a>
             </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/z5iXWC0.jpg" data-lightbox="gravida" data-title="Grávida 2">
-                    <img src="https://i.imgur.com/z5iXWC0.jpg" alt="Grávida 2">
+            <div class="portfolio-item">
+                <a href="Fotos-comerciais.html" class="portfolio-link">
+                    <img src="https://i.imgur.com/mQoc68c.jpg" alt="Fotos Comerciais" loading="lazy">
+                    <div class="portfolio-overlay"><h3>Fotos Comerciais</h3></div>
                 </a>
             </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/JZotMeU.jpg" data-lightbox="gravida" data-title="Grávida 3">
-                    <img src="https://i.imgur.com/JZotMeU.jpg" alt="Grávida 3">
+            <div class="portfolio-item">
+                <a href="dia-das-maes.html" class="portfolio-link">
+                    <img src="https://i.imgur.com/KnRMfdf.jpg" alt="Dia das Mães" loading="lazy">
+                    <div class="portfolio-overlay"><h3>Mães</h3></div>
                 </a>
             </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/lDNmmk3.jpg" data-lightbox="gravida" data-title="Grávida 4">
-                    <img src="https://i.imgur.com/lDNmmk3.jpg" alt="Grávida 4">
+            <div class="portfolio-item">
+                <a href="gravida.html" class="portfolio-link">
+                    <img src="https://i.imgur.com/xEqzmQ3.jpg" alt="Grávida" loading="lazy">
+                    <div class="portfolio-overlay"><h3>Grávida</h3></div>
                 </a>
             </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/zGBjEBl.jpg" data-lightbox="gravida" data-title="Grávida 5">
-                    <img src="https://i.imgur.com/zGBjEBl.jpg" alt="Grávida 5">
+            <div class="portfolio-item">
+                <a href="infantil.html" class="portfolio-link">
+                    <img src="https://i.imgur.com/x6NTt2d.jpg" alt="Infantil" loading="lazy">
+                    <div class="portfolio-overlay"><h3>Infantil</h3></div>
                 </a>
             </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/DkdOmrD.jpg" data-lightbox="gravida" data-title="Grávida 6">
-                    <img src="https://i.imgur.com/DkdOmrD.jpg" alt="Grávida 6">
+            <div class="portfolio-item">
+                <a href="homens.html" class="portfolio-link">
+                    <img src="https://i.imgur.com/A8t0i6C.jpg" alt="Homens" loading="lazy">
+                    <div class="portfolio-overlay"><h3>Homens</h3></div>
                 </a>
             </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/1udJhlv.jpg" data-lightbox="gravida" data-title="Grávida 7">
-                    <img src="https://i.imgur.com/1udJhlv.jpg" alt="Grávida 7">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/NW0kWa3.jpg" data-lightbox="gravida" data-title="Grávida 8">
-                    <img src="https://i.imgur.com/NW0kWa3.jpg" alt="Grávida 8">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/VaV4Xt1.jpg" data-lightbox="gravida" data-title="Grávida 9">
-                    <img src="https://i.imgur.com/VaV4Xt1.jpg" alt="Grávida 9">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/umAfwvC.jpg" data-lightbox="gravida" data-title="Grávida 10">
-                    <img src="https://i.imgur.com/umAfwvC.jpg" alt="Grávida 10">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/VZjVmuu.jpg" data-lightbox="gravida" data-title="Grávida 11">
-                    <img src="https://i.imgur.com/VZjVmuu.jpg" alt="Grávida 11">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/wkTnV4O.jpg" data-lightbox="gravida" data-title="Grávida 12">
-                    <img src="https://i.imgur.com/wkTnV4O.jpg" alt="Grávida 12">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/Meb3Hx4.jpg" data-lightbox="gravida" data-title="Grávida 13">
-                    <img src="https://i.imgur.com/Meb3Hx4.jpg" alt="Grávida 13">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/G1KnEZO.jpg" data-lightbox="gravida" data-title="Grávida 14">
-                    <img src="https://i.imgur.com/G1KnEZO.jpg" alt="Grávida 14">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/jIi8UU3.jpg" data-lightbox="gravida" data-title="Grávida 15">
-                    <img src="https://i.imgur.com/jIi8UU3.jpg" alt="Grávida 15">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/eNRCKAr.jpg" data-lightbox="gravida" data-title="Grávida 16">
-                    <img src="https://i.imgur.com/eNRCKAr.jpg" alt="Grávida 16">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/aJlMmGx.jpg" data-lightbox="gravida" data-title="Grávida 17">
-                    <img src="https://i.imgur.com/aJlMmGx.jpg" alt="Grávida 17">
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/iyrwVXb.jpg" data-lightbox="gravida" data-title="Grávida 18">
-                    <img src="https://i.imgur.com/iyrwVXb.jpg" alt="Grávida 18">
+            <div class="portfolio-item">
+                <a href="boudoir.html" class="portfolio-link">
+                    <img src="https://i.imgur.com/4Z5g5gD.jpg" alt="Boudoir" loading="lazy">
+                    <div class="portfolio-overlay"><h3>Boudoir</h3></div>
                 </a>
             </div>
         </div>
-        <a href="index.html#portfolio" class="btn-voltar">← Voltar ao Portfólio</a>
-    </main>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Luci Lemes Fotografia. Todos os direitos reservados.</p>
-    </footer>
+<section class="campaigns" id="campaigns">
+    <div class="container">
+        <div class="section-title">
+            <h2>Campanhas</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="campaign-card">
+                <img src="https://i.imgur.com/XRCdS1x.png" alt="Mães e Filhos" class="campaign-image" loading="lazy">
+                <div class="campaign-content">
+                    <span class="date">Maio 2025</span>
+                    <h3>Mães e Filhos</h3>
+                    <p>Sessão especial para celebrar o amor materno.</p>
+                    <a href="#contact" class="btn btn-dark">Agendar</a>
+                </div>
+            </div>
+            <div class="campaign-card">
+                <img src="https://i.imgur.com/xEqzmQ3.jpg" alt="Gestante" class="campaign-image" loading="lazy">
+                <div class="campaign-content">
+                    <span class="date">Todo o ano</span>
+                    <h3>Gestante</h3>
+                    <p>Registre esse momento mágico da sua vida.</p>
+                    <a href="#contact" class="btn btn-dark">Agendar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Lightbox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script>
-        // Configurações do Lightbox
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'showImageNumberLabel': true,
-            'alwaysShowNavOnTouchDevices': true
+<section id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>Sobre</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Luci Lemes é uma fotógrafa profissional com mais de três décadas de experiência no mercado. Seu trabalho combina técnica apurada com sensibilidade artística para criar imagens que contam histórias e evocam emoções.</p>
+                <p>Especializada em retratos femininos, moda e campanhas publicitárias, desenvolveu um estilo único que valoriza a essência de cada pessoa e projeto.</p>
+                <p>Com vasta experiência em estúdio e locações externas, seu trabalho já foi destaque em diversas publicações e campanhas de marcas renomadas.</p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contato</h2>
+        </div>
+        <div class="contact-info">
+            <div class="contact-card" onclick="window.location.href='https://maps.google.com?q=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220'">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Localização</h3>
+                <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
+            </div>
+            <div class="contact-card" onclick="window.location.href='mailto:contatolucilemes@gmail.com'">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>contatolucilemes@gmail.com</p>
+            </div>
+            <div class="contact-card" onclick="window.location.href='tel:+5544999467947'">
+                <i class="fas fa-phone"></i>
+                <h3>Telefone</h3>
+                <p>(44) 99946-7947</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form action="https://formsubmit.co/contatolucilemes@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Novo contato do site">
+                <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">ENVIAR MENSAGEM</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <a href="#" class="footer-logo">LUCI LEMES</a>
+    <div class="social-links">
+        <a href="https://www.facebook.com/share/166Ayv4cAZ/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/luci_lemes_fotografa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5544999467947" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="copyright">
+        &copy; 2025 Luci Lemes Fotografia. Todos os direitos reservados.
+    </div>
+</footer>
+
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<script>
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Atualiza a URL sem recarregar a página
+                if (history.pushState) {
+                    history.pushState(null, null, targetId);
+                } else {
+                    window.location.hash = targetId;
+                }
+            }
         });
-    </script>
+    });
+
+    // Form submission
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Feedback visual
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Mensagem enviada com sucesso!');
+                    form.reset();
+                } else {
+                    throw new Error('Erro ao enviar mensagem');
+                }
+            })
+            .catch(error => {
+                alert('Ocorreu um erro. Por favor, tente novamente mais tarde.');
+                console.error(error);
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            });
+        });
+    }
+    
+    // Lightbox config
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'showImageNumberLabel': true,
+        'alwaysShowNavOnTouchDevices': true,
+        'disableScrolling': true
+    });
+</script>
 </body>
 </html>
