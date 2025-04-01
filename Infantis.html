@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanhas Publicitárias | Luci Lemes Fotografia</title>
+    <link rel="icon" href="https://i.imgur.com/8But6ui.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        :root {
+            --preto: #000000;
+            --branco: #FFFFFF;
+            --cinza-escuro: #222222;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--cinza-escuro);
+        }
+        header {
+            background: var(--branco);
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            justify-content: center; /* Corrigido o typo "justify-cpuntent" */
+            align-items: center;
+        }
+        .logo {
+            display: inline-block;
+            height: 50px;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            max-width: 180px;
+        }
+        .gallery-page {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            height: 350px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: zoom-in;
+        }
+        .btn-voltar {
+            display: block;
+            margin: 40px auto 0;
+            padding: 12px 30px;
+            background: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            width: fit-content;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn-voltar:hover {
+            background: #333;
+        }
+        footer {
+            background: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes">
+        </a>
+    </header>
+
+    <main class="gallery-page">
+        <h1>Campanhas Publicitárias</h1> <!-- Alterado de "Ensaios Femininos" para "Campanhas Publicitárias" -->
+        <div class="gallery-grid">
+            <!-- Galeria com Lightbox -->
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/pDiDCka.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 1"> <!-- Corrigido "publicitário" para "publicitario" -->
+                    <img src="https://i.imgur.com/pDiDCka.jpg" alt="Campanha publicitária 1">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/m0zU3jq.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 2"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/m0zU3jq.jpg" alt="Campanha publicitária 2"> <!-- Alterado alt text -->
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/emj1iz3.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 3"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/emj1iz3.jpg" alt="Campanha publicitária 3"> <!-- Alterado alt text -->
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/fsnjvnu.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 4"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/fsnjvnu.jpg" alt="Campanha publicitária 4"> <!-- Alterado alt text -->
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/tKaJqcz.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 5"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/tKaJqcz.jpg" alt="Campanha publicitária 5"> <!-- Alterado alt text -->
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/SjpNXwv.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 6"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/SjpNXwv.jpg" alt="Campanha publicitária 6"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/lClBNXV.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 7"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/lClBNXV.jpg" alt="Campanha publicitária 7"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/ECIjY3e.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 8"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/ECIjY3e.jpg" alt="Campanha publicitária 8"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/1W2KgIF.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 9"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/1W2KgIF.jpg" alt="Campanha publicitária 9"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/MCkUkyG.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 10"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/MCkUkyG.jpg" alt="Campanha publicitária 10"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/6GZ4CGH.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 11"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/6GZ4CGH.jpg" alt="Campanha publicitária 11"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/AU4M2gD.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 12"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/AU4M2gD.jpg" alt="Campanha publicitária 12"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/Pcacwhz.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 13"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/Pcacwhz.jpg" alt="Campanha publicitária 13"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/eApW2WS.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 14"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/eApW2WS.jpg" alt="Campanha publicitária 14"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/LK1UsnX.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 15"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/LK1UsnX.jpg" alt="Campanha publicitária 15"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/zZnorGQ.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 16"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/zZnorGQ.jpg" alt="Campanha publicitária 16"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/FVsdMCR.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 17"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/FVsdMCR.jpg" alt="Campanha publicitária 17"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/D8spYXF.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 18"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/D8spYXF.jpg" alt="Campanha publicitária 18"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/cYEdhwF.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 19"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/cYEdhwF.jpg" alt="Campanha publicitária 19"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/9xYLHXw.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 20"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/9xYLHXw.jpg" alt="Campanha publicitária 20"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/SVNM4Ps.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 21"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/SVNM4Ps.jpg" alt="Campanha publicitária 21"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/oVfSOAX.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 22"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/oVfSOAX.jpg" alt="Campanha publicitária 22"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/36dy470.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 23"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/36dy470.jpg" alt="Campanha publicitária 23"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/s2WFwp4.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 24"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/s2WFwp4.jpg" alt="Campanha publicitária 24"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/9dZyP7H.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 25"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/9dZyP7H.jpg" alt="Campanha publicitária 25"> <!-- Alterado alt text -->
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/zgFGyCc.jpg" data-lightbox="publicitario" data-title="Campanha publicitária 26"> <!-- Alterado de "ensaios" para "publicitario" -->
+                    <img src="https://i.imgur.com/zgFGyCc.jpg" alt="Campanha publicitária 26"> <!-- Alterado alt text -->
+                </a>
+            </div>
+        </div>
+        <a href="index.html#portfolio" class="btn-voltar">← Voltar ao Portfólio</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Luci Lemes Fotografia. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Configurações do Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': true,
+            'alwaysShowNavOnTouchDevices': true
+        });
+    </script>
+</body>
+</html>
