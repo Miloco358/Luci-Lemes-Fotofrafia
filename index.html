@@ -309,9 +309,10 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
-            border: 1px solid var(--cinza-claro);
+            border: none;
             display: flex;
             flex-direction: column;
+            padding: 0;
         }
         
         .campaign-card:hover {
@@ -319,20 +320,10 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .campaign-image-container {
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: var(--cinza-claro);
-        }
-        
-        .campaign-image-container img {
-            width: auto;
-            height: 100%;
-            max-width: 100%;
-            object-fit: contain;
+        .campaign-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
         }
         
         .campaign-content {
@@ -591,6 +582,10 @@
             .contact-card {
                 padding: 20px;
             }
+            
+            .campaign-image {
+                height: 200px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -612,6 +607,10 @@
             
             .hero p {
                 font-size: 1rem;
+            }
+            
+            .campaign-image {
+                height: 180px;
             }
         }
     </style>
@@ -677,9 +676,7 @@
         </div>
         <div class="portfolio-grid">
             <div class="campaign-card">
-                <div class="campaign-image-container">
-                    <img src="https://i.imgur.com/XRCdS1x.png" alt="Mães e Filhos" loading="lazy">
-                </div>
+                <img src="https://i.imgur.com/XRCdS1x.png" alt="Mães e Filhos" class="campaign-image" loading="lazy">
                 <div class="campaign-content">
                     <span class="date">Maio 2025</span>
                     <h3>Mães e Filhos</h3>
@@ -688,9 +685,7 @@
                 </div>
             </div>
             <div class="campaign-card">
-                <div class="campaign-image-container">
-                    <img src="https://i.imgur.com/xEqzmQ3.jpg" alt="Gestante" loading="lazy">
-                </div>
+                <img src="https://i.imgur.com/xEqzmQ3.jpg" alt="Gestante" class="campaign-image" loading="lazy">
                 <div class="campaign-content">
                     <span class="date">Todo o ano</span>
                     <h3>Gestante</h3>
