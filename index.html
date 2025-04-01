@@ -1,5 +1,3 @@
-Não gostei do jeito que você fez, quero que faça algum outro jeito de destacar o dia das mães e também não envolva valores e promoções.
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,21 +5,20 @@ Não gostei do jeito que você fez, quero que faça algum outro jeito de destaca
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luci Lemes Fotografia | Studio Profissional</title>
     <meta name="description" content="Fotógrafa profissional especializada em ensaios femininos, fotos comerciais e campanhas publicitárias em Umuarama/PR">
-    
     <!-- Favicon e pré-carregamentos -->
     <link rel="icon" href="https://i.imgur.com/8But6ui.png" type="image/png">
     <link rel="preload" href="https://i.imgur.com/5SJzSNu.png" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://i.imgur.com">
-    
+
     <!-- Fontes e ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <!-- Lightbox CSS otimizado -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-    
+
     <style>
         :root {
             --preto: #000000;
@@ -29,8 +26,6 @@ Não gostei do jeito que você fez, quero que faça algum outro jeito de destaca
             --cinza-escuro: #222222;
             --cinza-medio: #555555;
             --cinza-claro: #EEEEEE;
-            --rosa: #e83f8c;
-            --rosa-claro: #ffc0d5;
         }
         
         body {
@@ -181,60 +176,6 @@ Não gostei do jeito que você fez, quero que faça algum outro jeito de destaca
             color: var(--cinza-claro);
         }
         
-        /* Banner Dia das Mães */
-        .mothers-day-banner {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: var(--rosa);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 5px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 1.2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            z-index: 2;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .mothers-day-tag {
-            background-color: var(--rosa);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 3px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-
-        .mothers-day-card {
-            position: relative;
-            border: 2px solid var(--rosa);
-        }
-
-        .mothers-day-card:after {
-            content: 'Promoção Especial';
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background-color: var(--rosa);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
         /* Botões otimizados */
         .btn {
             display: inline-block;
@@ -268,17 +209,6 @@ Não gostei do jeito que você fez, quero que faça algum outro jeito de destaca
         .btn-dark:hover {
             background-color: transparent;
             color: var(--preto);
-        }
-
-        .btn-pink {
-            background-color: var(--rosa);
-            color: var(--branco);
-            border: 2px solid var(--rosa);
-        }
-
-        .btn-pink:hover {
-            background-color: transparent;
-            color: var(--rosa);
         }
         
         /* Seções comuns */
@@ -409,7 +339,32 @@ Não gostei do jeito que você fez, quero que faça algum outro jeito de destaca
             margin-bottom: 15px;
             display: block;
         }
-        
+
+        /* Dia das Mães */
+        .mothers-day {
+            background-color: var(--branco);
+            padding: 60px 0;
+        }
+
+        .mothers-day-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .mothers-day-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .mothers-day-text p {
+            margin: 0 0 15px;
+            color: var(--cinza-escuro);
+        }
+
         /* Sobre */
         .about-content {
             display: grid;
@@ -629,13 +584,6 @@ Não gostei do jeito que você fez, quero que faça algum outro jeito de destaca
                 min-height: 500px;
             }
             
-            .mothers-day-banner {
-                top: 10px;
-                right: 10px;
-                font-size: 1rem;
-                padding: 10px 15px;
-            }
-            
             .btn {
                 display: block;
                 margin: 10px auto;
@@ -675,298 +623,262 @@ Não gostei do jeito que você fez, quero que faça algum outro jeito de destaca
             .hero p {
                 font-size: 1rem;
             }
-            
-            .mothers-day-banner {
-                position: static;
-                margin-bottom: 20px;
-                display: inline-block;
-            }
         }
     </style>
 </head>
 <body>
-    <header id="header">
-        <div class="header-container">
-            <a href="#" class="logo">
-                <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#campaigns">Campanhas</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
+<header id="header">
+    <div class="header-container">
+        <a href="#" class="logo">
+            <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes Fotografia">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#campaigns">Campanhas</a></li>
+                <li><a href="#mothers-day">Dia das Mães</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-buttons">
+            <a href="#portfolio" class="btn">Ver Portfólio</a>
+            <a href="#contact" class="btn">Agendar Sessão</a>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section class="hero" id="home">
-        <div class="mothers-day-banner">Dia das Mães</div>
-        <div class="hero-content">
-            <h1>Sessão Especial Dia das Mães</h1>
-            <p>Presenteie sua mãe com fotos profissionais que eternizam o amor entre vocês</p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn">Ver Portfólio</a>
-                <a href="#contact" class="btn btn-pink">Agendar Sessão</a>
+<section id="portfolio">
+    <div class="container">
+        <div class="section-title">
+            <h2>Portfólio</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <a href="ensaios-femininos.html" class="portfolio-link">
+                    <img src="https://i.imgur.com/HbDuMoV.jpg" alt="Ensaios Femininos" loading="lazy">
+                    <div class="portfolio-overlay"><h3>Ensaios Femininos</h3></div>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="Fotos-comerciais.html" class="portfolio-link">
+                    <img src="https://i.imgur.com/lyaJ1F2.jpg" alt="Fotos Comerciais" loading="lazy">
+                    <div class="portfolio-overlay"><h3>Fotos Comerciais</h3></div>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Portfólio <span class="mothers-day-tag">Dia das Mães</span></h2>
+<section class="campaigns" id="campaigns">
+    <div class="container">
+        <div class="section-title">
+            <h2>Campanhas</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="campaign-card">
+                <img src="https://i.imgur.com/NHjotEV.jpg" alt="Dia das Mães" loading="lazy">
+                <div class="campaign-content">
+                    <span class="date">Maio 2025</span>
+                    <h3>Mães e Filhos</h3>
+                    <p>Sessão especial para celebrar o amor materno.</p>
+                    <a href="#contact" class="btn btn-dark">Agendar</a>
+                </div>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <a href="ensaios-femininos.html" class="portfolio-link">
-                        <img src="https://i.imgur.com/HbDuMoV.jpg" alt="Ensaios Femininos" loading="lazy">
-                        <div class="portfolio-overlay"><h3>Ensaios Femininos</h3></div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="Fotos-comerciais.html" class="portfolio-link">
-                        <img src="https://i.imgur.com/lyaJ1F2.jpg" alt="Fotos Comerciais" loading="lazy">
-                        <div class="portfolio-overlay"><h3>Fotos Comerciais</h3></div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="maes-e-filhos.html" class="portfolio-link">
-                        <img src="https://i.imgur.com/NHjotEV.jpg" alt="Mães e Filhos" loading="lazy">
-                        <div class="portfolio-overlay"><h3>Mães e Filhos</h3></div>
-                    </a>
+            <div class="campaign-card">
+                <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80.jpg" alt="Gestante" loading="lazy">
+                <div class="campaign-content">
+                    <span class="date">Todo o ano</span>
+                    <h3>Gestante</h3>
+                    <p>Registre esse momento mágico da sua vida.</p>
+                    <a href="#contact" class="btn btn-dark">Agendar</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="campaigns" id="campaigns">
-        <div class="container">
-            <div class="section-title">
-                <h2>Campanhas</h2>
-            </div>
-            <div class="portfolio-grid">
-                <div class="campaign-card mothers-day-card">
-                    <img src="https://i.imgur.com/NHjotEV.jpg" alt="Dia das Mães" loading="lazy">
-                    <div class="campaign-content">
-                        <span class="date">Maio 2025 - Vagas Limitadas</span>
-                        <h3>Sessão Mães e Filhos</h3>
-                        <p>Pacote especial para o Dia das Mães com:</p>
-                        <ul style="text-align: left; margin-bottom: 15px;">
-                            <li>1 hora de sessão fotográfica</li>
-                            <li>10 fotos editadas em alta resolução</li>
-                            <li>Presente personalizado</li>
-                            <li>15% de desconto para reservas antecipadas</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-pink">Agendar Agora</a>
-                    </div>
-                </div>
-                <div class="campaign-card">
-                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80.jpg" alt="Gestante" loading="lazy">
-                    <div class="campaign-content">
-                        <span class="date">Todo o ano</span>
-                        <h3>Gestante</h3>
-                        <p>Registre esse momento mágico da sua vida.</p>
-                        <a href="#contact" class="btn btn-dark">Agendar</a>
-                    </div>
-                </div>
+<section class="mothers-day" id="mothers-day">
+    <div class="container">
+        <div class="section-title">
+            <h2>Dia das Mães</h2>
+        </div>
+        <div class="mothers-day-content">
+            <img src="https://i.imgur.com/NHjotEV.jpg" alt="Dia das Mães" loading="lazy" class="mothers-day-image">
+            <div class="mothers-day-text">
+                <p>Celebre o amor incondicional entre mães e filhos com uma sessão de fotos especial. Capture momentos que ficarão para sempre na memória!</p>
+                <p>Agende sua sessão e garanta um registro único para este Dia das Mães.</p>
+                <a href="#contact" class="btn btn-dark">Agendar Sessão</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>Sobre</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Luci Lemes é uma fotógrafa profissional com mais de três décadas de experiência no mercado. Seu trabalho combina técnica apurada com sensibilidade artística para criar imagens que contam histórias e evocam emoções.</p>
-                    <p>Especializada em retratos femininos, moda e campanhas publicitárias, desenvolveu um estilo único que valoriza a essência de cada pessoa e projeto.</p>
-                    <p>Com vasta experiência em estúdio e locações externas, seu trabalho já foi destaque em diversas publicações e campanhas de marcas renomadas.</p>
-                </div>
-                <div class="about-image"></div>
-            </div>
+<section id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>Sobre</h2>
         </div>
-    </section>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Luci Lemes é uma fotógrafa profissional com mais de três décadas de experiência no mercado. Seu trabalho combina técnica apurada com sensibilidade artística para criar imagens que contam histórias e evocam emoções.</p>
+                <p>Especializada em retratos femininos, moda e campanhas publicitárias, desenvolveu um estilo único que valoriza a essência de cada pessoa e projeto.</p>
+                <p>Com vasta experiência em estúdio e locações externas, seu trabalho já foi destaque em diversas publicações e campanhas de marcas renomadas.</p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </div>
+</section>
 
-    <section id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contato</h2>
+<section id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contato</h2>
+        </div>
+        <div class="contact-info">
+            <div class="contact-card" onclick="window.location.href='https://maps.google.com?q=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220'">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Localização</h3>
+                <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
             </div>
-            <div class="contact-info">
-                <div class="contact-card" onclick="window.location.href='https://maps.google.com?q=Studio+Luci+Lemes+-+Fotógrafa,+Av.+Flórida,+4240+-+Zona+I,+Umuarama+-+PR,+87501-220'">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Localização</h3>
-                    <p>Studio Luci Lemes - Fotógrafa<br>Av. Flórida, 4240 - Zona I<br>Umuarama - PR, 87501-220</p>
-                </div>
-                <div class="contact-card" onclick="window.location.href='mailto:contatolucilemes@gmail.com'">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>contatolucilemes@gmail.com</p>
-                </div>
-                <div class="contact-card" onclick="window.location.href='tel:+5544999467947'">
-                    <i class="fas fa-phone"></i>
-                    <h3>Telefone</h3>
-                    <p>(44) 99946-7947</p>
-                </div>
+            <div class="contact-card" onclick="window.location.href='mailto:contatolucilemes@gmail.com'">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>contatolucilemes@gmail.com</p>
             </div>
-            <div class="contact-form">
-                <form action="https://formsubmit.co/contatolucilemes@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="Novo contato do site">
-                    <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefone</label>
-                        <input type="tel" id="phone" name="phone" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" class="form-control" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="campaign">Campanha de Interesse</label>
-                        <select id="campaign" name="campaign" class="form-control">
-                            <option value="">Selecione...</option>
-                            <option value="Dia das Mães">Sessão Dia das Mães</option>
-                            <option value="Ensaios Femininos">Ensaios Femininos</option>
-                            <option value="Fotos Comerciais">Fotos Comerciais</option>
-                            <option value="Gestante">Sessão Gestante</option>
-                            <option value="Outros">Outros</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-pink">ENVIAR MENSAGEM</button>
-                </form>
+            <div class="contact-card" onclick="window.location.href='tel:+5544999467947'">
+                <i class="fas fa-phone"></i>
+                <h3>Telefone</h3>
+                <p>(44) 99946-7947</p>
             </div>
         </div>
-    </section>
+        <div class="contact-form">
+            <form action="https://formsubmit.co/contatolucilemes@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Novo contato do site">
+                <input type="hidden" name="_next" value="https://lucilemes.com/obrigado.html">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">ENVIAR MENSAGEM</button>
+            </form>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <a href="#" class="footer-logo">LUCI LEMES</a>
-        <div class="social-links">
-            <a href="https://www.facebook.com/share/166Ayv4cAZ/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com/luci_lemes_fotografa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/5544999467947" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <div class="copyright">
-            &copy; 2025 Luci Lemes Fotografia. Todos os direitos reservados.
-        </div>
-    </footer>
+<footer>
+    <a href="#" class="footer-logo">LUCI LEMES</a>
+    <div class="social-links">
+        <a href="https://www.facebook.com/share/166Ayv4cAZ/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/luci_lemes_fotografa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5544999467947" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="copyright">
+        &copy; 2025 Luci Lemes Fotografia. Todos os direitos reservados.
+    </div>
+</footer>
 
-    <!-- Lightbox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<script>
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
     
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Atualiza a URL sem recarregar a página
-                    if (history.pushState) {
-                        history.pushState(null, null, targetId);
-                    } else {
-                        window.location.hash = targetId;
-                    }
-                }
-            });
-        });
-
-        // Form submission
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const submitButton = form.querySelector('button[type="submit"]');
-                const originalText = submitButton.textContent;
-                
-                // Feedback visual
-                submitButton.disabled = true;
-                submitButton.textContent = 'Enviando...';
-                
-                fetch(form.action, {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        alert('Mensagem enviada com sucesso!');
-                        form.reset();
-                    } else {
-                        throw new Error('Erro ao enviar mensagem');
-                    }
-                })
-                .catch(error => {
-                    alert('Ocorreu um erro. Por favor, tente novamente mais tarde.');
-                    console.error(error);
-                })
-                .finally(() => {
-                    submitButton.disabled = false;
-                    submitButton.textContent = originalText;
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
                 });
-            });
-        }
-        
-        // Lightbox config
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'showImageNumberLabel': true,
-            'alwaysShowNavOnTouchDevices': true,
-            'disableScrolling': true
-        });
-
-        // Contador para o Dia das Mães
-        function updateCountdown() {
-            const mothersDay = new Date('May 11, 2025 00:00:00').getTime();
-            const now = new Date().getTime();
-            const distance = mothersDay - now;
-            
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            
-            const countdownElement = document.getElementById('mothers-day-countdown');
-            if (countdownElement) {
-                countdownElement.innerHTML = `Aproveite! Apenas ${days}d ${hours}h ${minutes}m para o Dia das Mães!`;
+                
+                // Atualiza a URL sem recarregar a página
+                if (history.pushState) {
+                    history.pushState(null, null, targetId);
+                } else {
+                    window.location.hash = targetId;
+                }
             }
-        }
-        
-        // Atualiza a cada minuto
-        updateCountdown();
-        setInterval(updateCountdown, 60000);
-    </script>
+        });
+    });
+
+    // Form submission
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Feedback visual
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Mensagem enviada com sucesso!');
+                    form.reset();
+                } else {
+                    throw new Error('Erro ao enviar mensagem');
+                }
+            })
+            .catch(error => {
+                alert('Ocorreu um erro. Por favor, tente novamente mais tarde.');
+                console.error(error);
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            });
+        });
+    }
+    
+    // Lightbox config
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'showImageNumberLabel': true,
+        'alwaysShowNavOnTouchDevices': true,
+        'disableScrolling': true
+    });
+</script>
 </body>
 </html>
