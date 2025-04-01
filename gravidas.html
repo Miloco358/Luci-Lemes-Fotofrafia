@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grávida | Luci Lemes Fotografia</title>
+    <link rel="icon" href="https://i.imgur.com/8But6ui.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        :root {
+            --preto: #000000;
+            --branco: #FFFFFF;
+            --cinza-escuro: #222222;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--cinza-escuro);
+        }
+        header {
+            background: var(--branco);
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            display: inline-block;
+            height: 50px;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            max-width: 180px;
+        }
+        .gallery-page {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            height: 350px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: zoom-in;
+        }
+        .btn-voltar {
+            display: block;
+            margin: 40px auto 0;
+            padding: 12px 30px;
+            background: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            width: fit-content;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn-voltar:hover {
+            background: #333;
+        }
+        footer {
+            background: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes">
+        </a>
+    </header>
+
+    <main class="gallery-page">
+        <h1>Grávida</h1>
+        <div class="gallery-grid">
+            <!-- Galeria com Lightbox -->
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/PYHYSAe.jpg" data-lightbox="gravida" data-title="Grávida 1">
+                    <img src="https://i.imgur.com/PYHYSAe.jpg" alt="Grávida 1">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/z5iXWC0.jpg" data-lightbox="gravida" data-title="Grávida 2">
+                    <img src="https://i.imgur.com/z5iXWC0.jpg" alt="Grávida 2">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/JZotMeU.jpg" data-lightbox="gravida" data-title="Grávida 3">
+                    <img src="https://i.imgur.com/JZotMeU.jpg" alt="Grávida 3">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/lDNmmk3.jpg" data-lightbox="gravida" data-title="Grávida 4">
+                    <img src="https://i.imgur.com/lDNmmk3.jpg" alt="Grávida 4">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/zGBjEBl.jpg" data-lightbox="gravida" data-title="Grávida 5">
+                    <img src="https://i.imgur.com/zGBjEBl.jpg" alt="Grávida 5">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/DkdOmrD.jpg" data-lightbox="gravida" data-title="Grávida 6">
+                    <img src="https://i.imgur.com/DkdOmrD.jpg" alt="Grávida 6">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/1udJhlv.jpg" data-lightbox="gravida" data-title="Grávida 7">
+                    <img src="https://i.imgur.com/1udJhlv.jpg" alt="Grávida 7">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/NW0kWa3.jpg" data-lightbox="gravida" data-title="Grávida 8">
+                    <img src="https://i.imgur.com/NW0kWa3.jpg" alt="Grávida 8">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/VaV4Xt1.jpg" data-lightbox="gravida" data-title="Grávida 9">
+                    <img src="https://i.imgur.com/VaV4Xt1.jpg" alt="Grávida 9">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/umAfwvC.jpg" data-lightbox="gravida" data-title="Grávida 10">
+                    <img src="https://i.imgur.com/umAfwvC.jpg" alt="Grávida 10">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/VZjVmuu.jpg" data-lightbox="gravida" data-title="Grávida 11">
+                    <img src="https://i.imgur.com/VZjVmuu.jpg" alt="Grávida 11">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/wkTnV4O.jpg" data-lightbox="gravida" data-title="Grávida 12">
+                    <img src="https://i.imgur.com/wkTnV4O.jpg" alt="Grávida 12">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/Meb3Hx4.jpg" data-lightbox="gravida" data-title="Grávida 13">
+                    <img src="https://i.imgur.com/Meb3Hx4.jpg" alt="Grávida 13">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/G1KnEZO.jpg" data-lightbox="gravida" data-title="Grávida 14">
+                    <img src="https://i.imgur.com/G1KnEZO.jpg" alt="Grávida 14">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/jIi8UU3.jpg" data-lightbox="gravida" data-title="Grávida 15">
+                    <img src="https://i.imgur.com/jIi8UU3.jpg" alt="Grávida 15">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/eNRCKAr.jpg" data-lightbox="gravida" data-title="Grávida 16">
+                    <img src="https://i.imgur.com/eNRCKAr.jpg" alt="Grávida 16">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/aJlMmGx.jpg" data-lightbox="gravida" data-title="Grávida 17">
+                    <img src="https://i.imgur.com/aJlMmGx.jpg" alt="Grávida 17">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/iyrwVXb.jpg" data-lightbox="gravida" data-title="Grávida 18">
+                    <img src="https://i.imgur.com/iyrwVXb.jpg" alt="Grávida 18">
+                </a>
+            </div>
+        </div>
+        <a href="index.html#portfolio" class="btn-voltar">← Voltar ao Portfólio</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Luci Lemes Fotografia. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Configurações do Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': true,
+            'alwaysShowNavOnTouchDevices': true
+        });
+    </script>
+</body>
+</html>
