@@ -14,15 +14,12 @@
             --preto: #000000;
             --branco: #FFFFFF;
             --cinza-escuro: #222222;
-            --rosa-claro: #fff0f5;
-            --rosa-escuro: #d87093;
         }
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             color: var(--cinza-escuro);
-            background-color: var(--rosa-claro);
         }
         header {
             background: var(--branco);
@@ -30,18 +27,18 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             text-align: center;
             display: flex;
-            justify-content: center;
+            justify-cpuntent: center; /* Centralizar */
             align-items: center;
-            border-bottom: 3px solid var(--rosa-escuro);
         }
         .logo {
             display: inline-block;
-            height: 50px;
+            height: 50px; /* Ajuste conforme necessário */
         }
+
         .logo img {
             height: 100%;
             width: auto;
-            max-width: 180px;
+            max-width: 180px; /* Controla a largura máxima */
         }
         .gallery-page {
             padding: 80px 20px;
@@ -52,26 +49,6 @@
             font-family: 'Playfair Display', serif;
             text-align: center;
             margin-bottom: 40px;
-            color: var(--rosa-escuro);
-            position: relative;
-            padding-bottom: 15px;
-        }
-        h1:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 3px;
-            background: var(--rosa-escuro);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .intro-text {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            font-size: 1.1rem;
-            line-height: 1.6;
         }
         .gallery-grid {
             display: grid;
@@ -83,12 +60,10 @@
             overflow: hidden;
             border-radius: 5px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            position: relative;
+            transition: transform 0.3s;
         }
         .gallery-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(216, 112, 147, 0.3);
         }
         .gallery-item img {
             width: 100%;
@@ -96,52 +71,27 @@
             object-fit: cover;
             cursor: zoom-in;
         }
-        .gallery-item:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(216, 112, 147, 0.2);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .gallery-item:hover:after {
-            opacity: 1;
-        }
         .btn-voltar {
             display: block;
             margin: 40px auto 0;
             padding: 12px 30px;
-            background: var(--rosa-escuro);
+            background: var(--preto);
             color: var(--branco);
             text-align: center;
             width: fit-content;
             text-decoration: none;
             border-radius: 5px;
-            transition: all 0.3s;
-            font-weight: 500;
-            border: 2px solid var(--rosa-escuro);
+            transition: background 0.3s;
         }
         .btn-voltar:hover {
-            background: transparent;
-            color: var(--rosa-escuro);
+            background: #333;
         }
         footer {
-            background: var(--rosa-escuro);
+            background: var(--preto);
             color: var(--branco);
             text-align: center;
             padding: 30px;
             margin-top: 50px;
-        }
-        @media (max-width: 768px) {
-            .gallery-item {
-                height: 280px;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
         }
     </style>
 </head>
@@ -154,56 +104,140 @@
 
     <main class="gallery-page">
         <h1>Dia das Mães</h1>
-        <div class="intro-text">
-            <p>Celebre o amor incondicional entre mães e filhos com uma sessão fotográfica especial. Cada imagem captura a beleza e a conexão única desta relação tão especial. Agende sua sessão e eternize momentos que ficarão para sempre em seu coração.</p>
-        </div>
-        
         <div class="gallery-grid">
-            <!-- Adicione suas fotos do Dia das Mães aqui -->
+            <!-- Galeria com Lightbox -->
             <div class="gallery-item">
-                <a href="https://i.imgur.com/NHjotEV.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
-                    <img src="https://i.imgur.com/NHjotEV.jpg" alt="Mãe e filha se abraçando">
+                <a href="https://i.imgur.com/zgYroYM.jpg" data-lightbox="ensaios" data-title="Dia das Mães">
+                    <img src="https://i.imgur.com/zgYroYM.jpg" alt="Dia das Mães 01">
                 </a>
             </div>
             <div class="gallery-item">
-                <a href="https://i.imgur.com/pDiDCka.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
-                    <img src="https://i.imgur.com/pDiDCka.jpg" alt="Mãe beijando bebê">
+                <a href="https://i.imgur.com/q5hnl9c.jpg" data-lightbox="ensaios" data-title="Dia das Mães">
+                    <img src="https://i.imgur.com/q5hnl9c.jpg" alt="Dia das Mães 02">
                 </a>
             </div>
             <div class="gallery-item">
-                <a href="https://i.imgur.com/m0zU3jq.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
-                    <img src="https://i.imgur.com/m0zU3jq.jpg" alt="Família reunida">
+                <a href="https://i.imgur.com/nM5z3WC.jpg" data-lightbox="ensaios" data-title="Dia das Mães">
+                    <img src="https://i.imgur.com/nM5z3WC.jpg" alt="Dia das Mães 03">
                 </a>
             </div>
             <div class="gallery-item">
-                <a href="https://i.imgur.com/emj1iz3.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
-                    <img src="https://i.imgur.com/emj1iz3.jpg" alt="Mãos de mãe e filho">
+                <a href="https://i.imgur.com/fQ5AUxv.jpg" data-lightbox="ensaios" data-title="Dia das Mães">
+                    <img src="https://i.imgur.com/fQ5AUxv.jpg" alt="Dia das Mães 04">
                 </a>
             </div>
             <div class="gallery-item">
-                <a href="https://i.imgur.com/fsnjvnu.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
-                    <img src="https://i.imgur.com/fsnjvnu.jpg" alt="Mãe com duas crianças">
+                <a href="https://i.imgur.com/tKaJqcz.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 5">
+                    <img src="https://i.imgur.com/tKaJqcz.jpg" alt="Ensaio Feminino 5">
                 </a>
             </div>
             <div class="gallery-item">
-                <a href="https://i.imgur.com/tKaJqcz.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
-                    <img src="https://i.imgur.com/tKaJqcz.jpg" alt="Gestante segurando ultrassom">
+                <a href="https://i.imgur.com/SjpNXwv.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 6">
+                    <img src="https://i.imgur.com/SjpNXwv.jpg" alt="Ensaio Feminino 6">
                 </a>
             </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/SjpNXwv.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
-                    <img src="https://i.imgur.com/SjpNXwv.jpg" alt="Mãe e filha rindo">
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/lClBNXV.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 7">
+                    <img src="https://i.imgur.com/lClBNXV.jpg" alt="Ensaio Feminino 7">
                 </a>
             </div>
-            <div class="gallery-item">
-                <a href="https://i.imgur.com/lClBNXV.jpg" data-lightbox="maes" data-title="Sessão Dia das Mães">
-                    <img src="https://i.imgur.com/lClBNXV.jpg" alt="Família em preto e branco">
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/ECIjY3e.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 8">
+                    <img src="https://i.imgur.com/ECIjY3e.jpg" alt="Ensaio Feminino 8">
                 </a>
             </div>
-            <!-- Adicione mais fotos conforme necessário -->
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/1W2KgIF.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 9">
+                    <img src="https://i.imgur.com/1W2KgIF.jpg" alt="Ensaio Feminino 9">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/MCkUkyG.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 10">
+                    <img src="https://i.imgur.com/MCkUkyG.jpg" alt="Ensaio Feminino 10">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/6GZ4CGH.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 11">
+                    <img src="https://i.imgur.com/6GZ4CGH.jpg" alt="Ensaio Feminino 11">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/AU4M2gD.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 12">
+                    <img src="https://i.imgur.com/AU4M2gD.jpg" alt="Ensaio Feminino 12">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/Pcacwhz.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 13">
+                    <img src="https://i.imgur.com/Pcacwhz.jpg" alt="Ensaio Feminino 13">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/eApW2WS.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 14">
+                    <img src="https://i.imgur.com/eApW2WS.jpg" alt="Ensaio Feminino 14">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/LK1UsnX.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 15">
+                    <img src="https://i.imgur.com/LK1UsnX.jpg" alt="Ensaio Feminino 15">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/zZnorGQ.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 16">
+                    <img src="https://i.imgur.com/zZnorGQ.jpg" alt="Ensaio Feminino 16">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/FVsdMCR.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 17">
+                    <img src="https://i.imgur.com/FVsdMCR.jpg" alt="Ensaio Feminino 17">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/D8spYXF.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 18">
+                    <img src="https://i.imgur.com/D8spYXF.jpg" alt="Ensaio Feminino 18">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/cYEdhwF.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 19">
+                    <img src="https://i.imgur.com/cYEdhwF.jpg" alt="Ensaio Feminino 19">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/9xYLHXw.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 20">
+                    <img src="https://i.imgur.com/9xYLHXw.jpg" alt="Ensaio Feminino 20">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/SVNM4Ps.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 21">
+                    <img src="https://i.imgur.com/SVNM4Ps.jpg" alt="Ensaio Feminino 21">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/oVfSOAX.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 22">
+                    <img src="https://i.imgur.com/oVfSOAX.jpg" alt="Ensaio Feminino 22">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/36dy470.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 23">
+                    <img src="https://i.imgur.com/36dy470.jpg" alt="Ensaio Feminino 23">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/s2WFwp4.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 24">
+                    <img src="https://i.imgur.com/s2WFwp4.jpg" alt="Ensaio Feminino 24">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/9dZyP7H.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 25">
+                    <img src="https://i.imgur.com/9dZyP7H.jpg" alt="Ensaio Feminino 25">
+                </a>
+            </div>
+             <div class="gallery-item">
+                <a href="https://i.imgur.com/zgFGyCc.jpg" data-lightbox="ensaios" data-title="Ensaio Feminino 26">
+                    <img src="https://i.imgur.com/zgFGyCc.jpg" alt="Ensaio Feminino 26">
+                </a>
+            </div>
         </div>
-        
-        <a href="index.html#portfolio" class="btn-voltar">← Voltar ao Portfólio</a>
+        <a href="index.html#portfolio" class="btn-voltar">← Voltar ao Início</a>
     </main>
 
     <footer>
@@ -219,8 +253,7 @@
             'resizeDuration': 200,
             'wrapAround': true,
             'showImageNumberLabel': true,
-            'alwaysShowNavOnTouchDevices': true,
-            'fadeDuration': 300
+            'alwaysShowNavOnTouchDevices': true
         });
     </script>
 </body>
