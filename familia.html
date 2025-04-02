@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família | Luci Lemes Fotografia</title>
+    <link rel="icon" href="https://i.imgur.com/8But6ui.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        :root {
+            --preto: #000000;
+            --branco: #FFFFFF;
+            --cinza-escuro: #222222;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--cinza-escuro);
+        }
+        header {
+            background: var(--branco);
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            display: inline-block;
+            height: 50px;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            max-width: 180px;
+        }
+        .gallery-page {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            height: 350px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: zoom-in;
+        }
+        .btn-voltar {
+            display: block;
+            margin: 40px auto 0;
+            padding: 12px 30px;
+            background: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            width: fit-content;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn-voltar:hover {
+            background: #333;
+        }
+        footer {
+            background: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="https://i.imgur.com/5SJzSNu.png" alt="Luci Lemes">
+        </a>
+    </header>
+
+    <main class="gallery-page">
+        <h1>Família</h1>
+        <div class="gallery-grid">
+            <!-- Galeria com Lightbox -->
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/L9vYQ7h.jpg" data-lightbox="familia" data-title="Família 1">
+                    <img src="https://i.imgur.com/L9vYQ7h.jpg" alt="Família 1">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/cPIp4M6.jpg" data-lightbox="familia" data-title="Família 2">
+                    <img src="https://i.imgur.com/cPIp4M6.jpg" alt="Família 2">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/w5Pcd80.jpg" data-lightbox="familia" data-title="Família 3">
+                    <img src="https://i.imgur.com/w5Pcd80.jpg" alt="Família 3">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/ZcWJ7kf.jpg" data-lightbox="familia" data-title="Família 4">
+                    <img src="https://i.imgur.com/ZcWJ7kf.jpg" alt="Família 4">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/HphCMGR.jpg" data-lightbox="familia" data-title="Família 5">
+                    <img src="https://i.imgur.com/HphCMGR.jpg" alt="Família 5">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/qXX2XCQ.jpg" data-lightbox="familia" data-title="Família 6">
+                    <img src="https://i.imgur.com/qXX2XCQ.jpg" alt="Família 6">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/GCE2N0D.jpg" data-lightbox="familia" data-title="Família 7">
+                    <img src="https://i.imgur.com/GCE2N0D.jpg" alt="Família 7">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/GvGYJTZ.jpg" data-lightbox="familia" data-title="Família 8">
+                    <img src="https://i.imgur.com/GvGYJTZ.jpg" alt="Família 8">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/cdEyXXO.jpg" data-lightbox="familia" data-title="Família 9">
+                    <img src="https://i.imgur.com/cdEyXXO.jpg" alt="Família 9">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/iwJuZJc.jpg" data-lightbox="familia" data-title="Família 10">
+                    <img src="https://i.imgur.com/iwJuZJc.jpg" alt="Família 10">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/x6NTt2d.jpg" data-lightbox="familia" data-title="Família 11">
+                    <img src="https://i.imgur.com/x6NTt2d.jpg" alt="Família 11">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://i.imgur.com/KnRMfdf.jpg" data-lightbox="familia" data-title="Família 12">
+                    <img src="https://i.imgur.com/KnRMfdf.jpg" alt="Família 12">
+                </a>
+            </div>
+        </div>
+        <a href="index.html#portfolio" class="btn-voltar">← Voltar ao Início</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Luci Lemes Fotografia. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Configurações do Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': true,
+            'alwaysShowNavOnTouchDevices': true
+        });
+    </script>
+</body>
+</html>
